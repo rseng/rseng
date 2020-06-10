@@ -1,0 +1,7 @@
+RSE-research-intention	Is the software intended for research?	yes,no
+RSE-domain-intention	Is the software intended for a particular domain?	yes,no
+RSE-question-intention	Was the software created with intention to solve a research question?	yes,no
+RSE-citation	Has the software been cited?	yes,no
+RSE-usage	Has the software been used by researchers?	yes,no
+RSE-absence	Would taking away the software be a detriment to conducting research?	yes,no
+RSE-absence	Would taking away the software be a detriment to research?	yes,no
