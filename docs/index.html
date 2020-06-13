@@ -14,6 +14,7 @@ ul>li {
 </style>
 
 <div class="container mtb">
+
     <div class="row" style="margin-top:100px">
         <div class="col-lg-5">
             <img class="img-responsive" src="{{ "/assets/img/logo/logo-transparent.svg" | prepend: site.baseurl }}" alt="">
@@ -26,5 +27,21 @@ ul>li {
                to better understand research software.
             </p>
         </div>
-    </div><! --/row -->
+    </div>
+
+<div class="row">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-5" style="margin-right:20px">
+        <a class="btn btn-theme" 
+           href="{{ site.baseurl }}/api/taxonomy/" 
+           role="button"
+           style="margin-left:10px;">Taxonomy JSON</a>
+        <a class="btn btn-theme" 
+           href="{{ site.baseurl }}/api/criteria/" 
+           role="button"
+           style="margin-left:10px;">Criteria JSON</a>
+    </div>
+</div>
+
 </div><! --/container -->
