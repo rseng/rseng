@@ -1,61 +1,30 @@
 ---
-layout: portfolio
-title: Research Software Criteria and Taxonomy
+layout: about
+title: ""
 permalink: /
 ---
 
-<div class="row">
-    <div class="col-md-6">
-        <a class="btn btn-theme" 
-           href="{{ site.baseurl }}/api/taxonomy/" 
-           role="button"
-           style="margin-left:10px;">Taxonomy JSON</a>
-        <a class="btn btn-theme" 
-           href="{{ site.baseurl }}/api/criteria/" 
-           role="button"
-           style="margin-left:10px;">Criteria JSON</a>
-    </div>
-    <div class="col-md-5" style="margin-right:20px">
-        <a class="btn btn-theme" 
-           href="#" 
-           role="button"
-           style="float:right;">Tutorials</a>
-        <a class="btn btn-theme" 
-           href="#"
-           role="button"
-           title="Coming Soon!"
-           style="float:right;">Generate</a>
-    </div>
-</div>
+<style>
+ul {
+  color:#999
+}
+ul>li {
+  color:#999
+}
+</style>
 
-{% include tags.html %}
-
-<div class="row">
-  {% assign loopcount = 1 %}
-  {% for post in site.posts %}
-
-   {% if loopcount < 4 %}
-
-   <!-- Parse news-->
-   {% if post.category == "examples" %}
-   {% assign loopcount = loopcount | plus: 1 %}
-   <div class="col-md-4">
-      <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <p>{{ post.content | truncatewords: 20 | strip_html }}</p>  
-   </div>
-   {% endif %}
-
-   {% if post.category == "tutorials" %}
-   {% assign loopcount = loopcount | plus: 1 %}
-   <div class="col-md-4">
-      <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <p>{{ post.content | truncatewords: 20 | strip_html }}</p>  
-   </div>
-   {% endif %}
-   {% endif %}
-
-  {% endfor %}
-</div>
-
+<div class="container mtb">
+    <div class="row" style="margin-top:100px">
+        <div class="col-lg-5">
+            <img class="img-responsive" src="{{ "/assets/img/logo/logo-transparent.svg" | prepend: site.baseurl }}" alt="">
+        </div>
+        <div class="col-lg-7">
+            <h3 style="color:#777">Research Software Criteria and Taxonomy</h3>
+            <p>This is a simple interface to expose research software criteria and taxonomy.
+               Both are available programmatically via the <a href="https://github.com/rseng/rseng" target="_blank">rseng</a>
+               software, and used by the <a href="https://github.com/rseng/rse" target="_blank">Research Software Encyclopedia</a>
+               to better understand research software.
+            </p>
+        </div>
+    </div><! --/row -->
+</div><! --/container -->
