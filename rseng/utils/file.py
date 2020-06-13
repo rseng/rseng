@@ -14,6 +14,7 @@ import json
 import os
 import pickle
 import tempfile
+import yaml
 
 
 def get_latest_modified(base, pattern="*.json"):
@@ -59,6 +60,29 @@ def write_file(filename, content):
     """
     with open(filename, "w") as fd:
         fd.write(content)
+
+
+def read_yaml(filename):
+    """read a yaml file, only including sections between dashes
+
+       Arguments:
+         - filename (str) : the filename to read
+    """
+    stream = read_file(filename, readlines=False)
+    return yaml.load(stream, Loader=yaml.FullLoader)
+
+
+def write_yaml(yaml_dict, filename):
+    """write a dictionary to yaml file
+ 
+       Arguments:
+        - yaml_dict (dict) : the dict to print to yaml
+        - filename (str) : the output file to write to
+        - pretty_print (bool): if True, will use nicer formatting
+    """
+    with open(filename, "w") as filey:
+        filey.writelines(yaml.dump(yaml_dict))
+    return filename
 
 
 def write_json(json_obj, filename, pretty=True):

@@ -69,7 +69,51 @@ RSE-usage	Has the software been used by researchers?	yes,no
 RSE-absence	Would taking away the software be a detriment to research?	yes,no
 ```
 
-**under development**
+### Taxonomy
+
+Taxonomy are interacted with in a similar fashion.
+
+```python
+from rseng.main.taxonomy import Taxonomy
+tax = Taxonomy()
+```
+
+It will show you the total number of nodes (nested too):
+
+
+```python
+from rseng.main.taxonomy import Taxonomy
+tax = Taxonomy()
+#  [Taxonomy:24]
+```
+
+Validation happens as the default file is loaded. Akin to criteria, the files
+are located in [rseng/main/taxonomy](rseng/main/taxonomy) in yaml format, and
+are dated. You can quickly print an easily viewable, human understandable
+version of the tree:
+
+```python
+for name in tax.flatten(): 
+   ...:     print(name) 
+   ...:                                                                                                                                                                                                                      
+Software to directly conduct research >> Domain-specific software >> Domain-specific hardware
+Software to directly conduct research >> Domain-specific software >> Domain-specific optimized software
+Software to directly conduct research >> Domain-specific software >> Domain-specific analysis software
+Software to directly conduct research >> General software >> Numerical libraries
+Software to directly conduct research >> General software >> Data collection
+Software to directly conduct research >> General software >> Visualization
+Software to support research >> Explicitly for research >> Workflow managers
+Software to support research >> Explicitly for research >> Interactive development environments for research
+Software to support research >> Explicitly for research >> Provenance and metadata collection tools
+Software to support research >> Used for research but not explicitly for it >> Databases
+Software to support research >> Used for research but not explicitly for it >> Application Programming Interfaces
+Software to support research >> Used for research but not explicitly for it >> Frameworks
+Software to support research >> Incidentally used for research >> Operating systems
+Software to support research >> Incidentally used for research >> Personal scheduling and task management
+Software to support research >> Incidentally used for research >> Version control
+Software to support research >> Incidentally used for research >> Text editors and integrated development environments
+Software to support research >> Incidentally used for research >> Communication tools or platforms
+```
 
 ## License
 
