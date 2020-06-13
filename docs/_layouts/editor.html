@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    <!-- Theme included stylesheets -->
+    <link href="//cdn.quilljs.com/1.3.2/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.3.2/quill.bubble.css" rel="stylesheet"> 
+    <body>
+        {% include wrap.html %}
+        {% include nav.html %}
+
+        <!-- Include external JS libs. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="{{ "/assets/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/retina-1.1.0.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/jquery.hoverdir.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/jquery.hoverex.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/jquery.prettyPhoto.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/jquery.isotope.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/toastr.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+        <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+        <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+        <script src="{{ "/assets/js/jszip.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/jszip-utils.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/assets/js/FileSaver.min.js" | prepend: site.baseurl }}"></script>
+        <script src="//cdn.quilljs.com/1.3.2/quill.js"></script>
+        <script src="//cdn.quilljs.com/1.3.2/quill.min.js"></script>
+ 
+        {{ content }}
+ 
+        {% include footer.html %}
+
+<script> 
+var editor;
+var zip = new JSZip();
+
+$(function() {
+
+    // Zip Helpers
+    function resetMessage () {
+        $("#result")
+        .removeClass()
+        .text("");
+    }
+    function showMessage(text) {
+        resetMessage();
+        $("#result")
+        .append('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + text)
+        .addClass("alert alert-success alert-dismissible")
+    }
+    function showError(text) {
+        resetMessage();
+        $("#result")
+        .append('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + text)
+        .addClass("alert alert-danger alert-dismissible")
+    }
+    function updatePercent(percent) {
+        $("#progress_bar").removeClass("hide")
+        .find(".progress-bar")
+        .attr("aria-valuenow", percent)
+        .css({
+            width : percent + "%"
+        });
+    }
+
+    var Promise = window.Promise;
+    if (!Promise) {
+        Promise = JSZip.external.Promise;
+    }
+
+    if(!JSZip.support.blob) {
+        showError("Download only with a recent browser You will need to copy paste the recipe and download individual files.!");
+        return;
+    }
+
+    String.prototype.replaceAll = function(search, replacement) {
+        var target = this;
+        return target.split(search).join(replacement);
+    };
+
+    function html2text( html ) {
+        var d = document.createElement( 'div' );
+        console.log(html)
+        html = html.replaceAll('<p></p>','<br>')
+        console.log(html)
+        d.innerHTML = html;
+        return d.textContent;
+    }
+
+
+    // Initialize Editor
+    var options = {
+        debug: 'warning',
+        modules: {
+            toolbar: "#toolbar",
+        },
+        placeholder: "You can select apps from the site to automatically generate your recipe here.",
+        readOnly: false,
+        theme: 'snow'
+    };
+
+
+    // Download Recipe
+    
+    var customButton = document.querySelector('#download');
+        customButton.addEventListener('click', function() {
+            var text = $('.ql-editor').html().replace('<p>','').replaceAll('&amp;','&') // First line
+            var text = text.replaceAll('<p></p>','\n').replaceAll('<p>','\n').replaceAll('<\p>','\n').replaceAll('<br>','\n')
+            var text = text.replace(/(<([^>]+)>)/g, "");
+            download('Singularity', text)
+    });
+
+    function download(recipe, text){
+        resetMessage();
+        zip.file("Singularity", text);
+        zip.generateAsync({type:"blob"}).then(function callback(blob) {
+
+            // see FileSaver.js
+            saveAs(blob, "SingularityRecipe.scif.zip");
+            showMessage("Download of recipe and supporting files complete.");
+
+        }, function (e) {
+            showError(e);
+        });
+    }
+
+    function urlToPromise(url) {
+        return new Promise(function(resolve, reject) {
+            JSZipUtils.getBinaryContent(url, function (err, data) {
+                if(err) {
+                    reject(err);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+    }
+
+    // Clear Editor
+    $('#btn-clear').click(function(){
+        $('.ql-editor').html("");
+    })
+
+    $('#btn-download').click(function(){
+        $('#download').click();
+    })
+
+    $('#btn-empty').click(function(){
+        $('.ql-editor').html("");
+        localStorage.setItem("scif-recipes", JSON.stringify({}))
+        showMessage("Your recipe box has been emptied.");
+    })
+
+    editor = new Quill('#textarea', options);
+   
+
+    // Add recipe text
+   function add_text(editor,content) {
+       var length = editor.getLength() + 1;
+       editor.insertText(length,content)
+   } 
+
+    // Load Recipes
+    if (localStorage.getItem("scif-recipes") === null) {  
+
+         add_text(editor,"# You don't have any app recipes saved!\n");
+         add_text(editor,"# Try <a href='{{ site.baseurl }}/tag/'> browsing </a> for some.");
+
+ 
+        } else {
+
+           recipes = JSON.parse(localStorage.getItem('scif-recipes'));
+           zip.file("README.md", urlToPromise("{{ site.baseurl }}/README"), {binary:true});
+
+           $.each( recipes, function( name, content ) {
+               text = content.text.replace(/(?:\r\n|\r|\n)/g, '\n').replace('<br />','\n').trim();
+               add_text(editor,"# " + name + "\n");
+               add_text(editor,text);
+
+               // Add files to zip
+               if (Object.prototype.hasOwnProperty.call(content, 'files')) {
+                   var files = content.files
+                   $.each( files, function( idx, file ) {
+                       var filename = file.split('/').reverse()[0];
+                       zip.file(filename, urlToPromise(file), {binary:true});
+                   });
+               }
+
+           });
+
+        }
+        
+  });
+        </script>
+    </body>
+</html>

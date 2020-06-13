@@ -60,6 +60,12 @@ class CriteriaSet:
     def __repr__(self):
         return self.__str__()
 
+    def __iter__(self):
+        """Allow the user to iterate over criteria.
+        """
+        for name, criteria in self.criteria.items():
+            yield criteria
+
     def load(self, data_file, sep="\t"):
         """Load a data file with a particular separator.
         """
@@ -90,6 +96,12 @@ class Criteria:
         return "{}{}{}{}{}".format(
             self.uid, sep, self.question, sep, ",".join(self.options)
         )
+
+    def __str__(self):
+        return "[Criteria:%s,%s]" % (self.uid, self.question)
+
+    def __repr__(self):
+        return self.__str__()
 
     def summary(self):
         return "[%s][%s]" % (self.uid, self.question)

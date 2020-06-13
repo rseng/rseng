@@ -1,0 +1,61 @@
+---
+layout: portfolio
+title: Research Software Criteria and Taxonomy
+permalink: /
+---
+
+<div class="row">
+    <div class="col-md-6">
+        <a class="btn btn-theme" 
+           href="{{ site.baseurl }}/api/taxonomy/" 
+           role="button"
+           style="margin-left:10px;">Taxonomy JSON</a>
+        <a class="btn btn-theme" 
+           href="{{ site.baseurl }}/api/criteria/" 
+           role="button"
+           style="margin-left:10px;">Criteria JSON</a>
+    </div>
+    <div class="col-md-5" style="margin-right:20px">
+        <a class="btn btn-theme" 
+           href="#" 
+           role="button"
+           style="float:right;">Tutorials</a>
+        <a class="btn btn-theme" 
+           href="#"
+           role="button"
+           title="Coming Soon!"
+           style="float:right;">Generate</a>
+    </div>
+</div>
+
+{% include tags.html %}
+
+<div class="row">
+  {% assign loopcount = 1 %}
+  {% for post in site.posts %}
+
+   {% if loopcount < 4 %}
+
+   <!-- Parse news-->
+   {% if post.category == "examples" %}
+   {% assign loopcount = loopcount | plus: 1 %}
+   <div class="col-md-4">
+      <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <p>{{ post.content | truncatewords: 20 | strip_html }}</p>  
+   </div>
+   {% endif %}
+
+   {% if post.category == "tutorials" %}
+   {% assign loopcount = loopcount | plus: 1 %}
+   <div class="col-md-4">
+      <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <p>{{ post.content | truncatewords: 20 | strip_html }}</p>  
+   </div>
+   {% endif %}
+   {% endif %}
+
+  {% endfor %}
+</div>
+

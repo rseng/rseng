@@ -15,7 +15,11 @@ from the encyclopedia.
 ## Usage
 
 Usage of the library includes programmatic (within Python or command line) 
-interaction with criteria or taxonomy.
+interaction with criteria or taxonomy, and generation of output files.
+
+ - [Criteria](#criteria)
+ - [Taxonomy](#taxonomy)
+ - [Generate](#generate)
 
 ### Criteria
 
@@ -57,7 +61,7 @@ cset.criteria['RSE-usage'].options
 # ['yes', 'no']
 ```
 
-And further interact with the CriteriaSet:
+And further interact with the CriteriaSet, for example export to a tabular file:
 
 ```python
 print(cset.export()) # You can also define a "filename" and/or "sep" here.
@@ -67,6 +71,28 @@ RSE-question-intention	Was the software created with intention to solve a resear
 RSE-citation	Has the software been cited?	yes,no
 RSE-usage	Has the software been used by researchers?	yes,no
 RSE-absence	Would taking away the software be a detriment to research?	yes,no
+```
+
+or iterate through the criteria, or get a list of all of them.
+
+```python
+> list(cset)
+[[Criteria:RSE-research-intention,Is the software intended for research?],
+ [Criteria:RSE-domain-intention,Is the software intended for a particular domain?],
+ [Criteria:RSE-question-intention,Was the software created with intention to solve a research question?],
+ [Criteria:RSE-citation,Has the software been cited?],
+ [Criteria:RSE-usage,Has the software been used by researchers?],
+ [Criteria:RSE-absence,Would taking away the software be a detriment to research?]]
+
+for criteria in cset:
+    print(criteria)
+
+[Criteria:RSE-research-intention,Is the software intended for research?]
+[Criteria:RSE-domain-intention,Is the software intended for a particular domain?]
+[Criteria:RSE-question-intention,Was the software created with intention to solve a research question?]
+[Criteria:RSE-citation,Has the software been cited?]
+[Criteria:RSE-usage,Has the software been used by researchers?]
+[Criteria:RSE-absence,Would taking away the software be a detriment to research?]
 ```
 
 ### Taxonomy
@@ -114,6 +140,54 @@ Software to support research >> Incidentally used for research >> Version contro
 Software to support research >> Incidentally used for research >> Text editors and integrated development environments
 Software to support research >> Incidentally used for research >> Communication tools or platforms
 ```
+
+### Generate
+
+After you install rseng, the `rseng` executable should be in your path.
+You can generate output files for the taxonomy or critiera to a folder
+oath that doesn't exist yet. For example, to generate the markdown
+files for the static documentation for each of the taxonomy and criteria
+we do:
+
+```bash
+# rseng generate <type>   <path>          <version>
+$ rseng generate taxonomy docs/_taxonomy
+docs/_taxonomy/RSE-taxonomy-domain-hardware.md
+docs/_taxonomy/RSE-taxonomy-optimized.md
+docs/_taxonomy/RSE-taxonomy-analysis.md
+docs/_taxonomy/RSE-taxonomy-numerical libraries.md
+docs/_taxonomy/RSE-taxonomy-data-collection.md
+docs/_taxonomy/RSE-taxonomy-visualization.md
+docs/_taxonomy/RSE-taxonomy-workflow-managers.md
+docs/_taxonomy/RSE-taxonomy-ide-research.md
+docs/_taxonomy/RSE-taxonomy-provenance-metadata-tools.md
+docs/_taxonomy/RSE-taxonomy-databases.md
+docs/_taxonomy/RSE-taxonomy-application-programming-interfaces.md
+docs/_taxonomy/RSE-taxonomy-frameworks.md
+docs/_taxonomy/RSE-taxonomy-operating-systems.md
+docs/_taxonomy/RSE-taxonomy-personal-scheduling-task-management.md
+docs/_taxonomy/RSE-taxonomy-version-control.md
+docs/_taxonomy/RSE-taxonomy-text-editors-ides.md
+docs/_taxonomy/RSE-taxonomy-communication-tools.md
+```
+
+The default version generated for each is "latest" but you can add another
+version as the last argument to change that. Here is generation
+of the criteria, showing using latest:
+
+```bash
+# rseng generate <type>   <path>          <version>
+$ rseng generate criteria docs/_criteria
+docs/_criteria/RSE-research-intention.md
+docs/_criteria/RSE-domain-intention.md
+docs/_criteria/RSE-question-intention.md
+docs/_criteria/RSE-citation.md
+docs/_criteria/RSE-usage.md
+docs/_criteria/RSE-absence.md
+```
+
+
+
 
 ## License
 

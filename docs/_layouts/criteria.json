@@ -1,0 +1,25 @@
+---
+title: criteria
+layout: none
+tipue_search_active: false
+exclude_from_search: true
+---
+
+{
+
+  "links": {
+    "self": "{{ site.url }}{{ page.url }}"
+  },
+
+  "data": [
+
+        {% for element in site.criteria %}
+            {
+                "uid": "{{ element.uid }}",
+                "name": "{{ element.name }}",
+                {% if element.options %}"options": "{{ element.options }}",{% endif %}
+                "date": "{{ element.date }}"
+            }{% if forloop.last %}{% else %},{% endif %}
+{% endfor %}
+]
+}
