@@ -17,7 +17,7 @@ exclude_from_search: true
             {
                 "uid": "{{ element.uid }}",
                 "name": "{{ element.name }}",
-                {% if element.options %}"options": "{{ element.options }}",{% endif %}
+                {% if element.options %}"options": [{% for option in element.options %}"{{ option }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],{% endif %}
                 "date": "{{ element.date }}"
             }{% if forloop.last %}{% else %},{% endif %}
 {% endfor %}
