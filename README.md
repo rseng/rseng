@@ -4,6 +4,8 @@
 
 Criteria and taxonomy for research software engineering (rseng).
 
+![docs/assets/img/taxonomy/taxonomy-circle.png](docs/assets/img/taxonomy/taxonomy-circle.png)
+
 ## Overview
 
 This repository serves a taxonomy and criteria for research software,
