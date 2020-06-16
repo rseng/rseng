@@ -1,0 +1,148 @@
+{
+    "name": "root",
+    "children": [
+        {
+            "name": "Software to directly conduct research",
+            "uid": "RSE-taxonomy-conduct-research",
+            "children": [
+                {
+                    "name": "Domain-specific software",
+                    "uid": "RSE-taxonomy-domain-specific",
+                    "children": [
+                        {
+                            "name": "Domain-specific hardware",
+                            "uid": "RSE-taxonomy-domain-hardware",
+                            "example": "software for physics to control lab equipment",
+                            "size": 12
+                        },
+                        {
+                            "name": "Domain-specific optimized software",
+                            "uid": "RSE-taxonomy-optimized",
+                            "example": "neuroscience software optimized for GPU",
+                            "size": 12
+                        },
+                        {
+                            "name": "Domain-specific analysis software",
+                            "uid": "RSE-taxonomy-analysis",
+                            "example": "SPM, fsl, afni for neuroscience",
+                            "size": 12
+                        }
+                    ],
+                    "size": 12
+                },
+                {
+                    "name": "General software",
+                    "uid": "RSE-taxonomy-general-software",
+                    "children": [
+                        {
+                            "name": "Numerical libraries",
+                            "uid": "RSE-taxonomy-numerical libraries",
+                            "example": "includes optimization, statistics, simulation, e.g., numpy",
+                            "size": 12
+                        },
+                        {
+                            "name": "Data collection",
+                            "uid": "RSE-taxonomy-data-collection",
+                            "example": "web-based experiments or portals",
+                            "size": 12
+                        },
+                        {
+                            "name": "Visualization",
+                            "uid": "RSE-taxonomy-visualization",
+                            "example": "interfaces to interact with, understand, and see data, plotting tools",
+                            "size": 12
+                        }
+                    ],
+                    "size": 12
+                }
+            ],
+            "size": 12
+        },
+        {
+            "name": "Software to support research",
+            "uid": "RSE-taxonomy-support-research",
+            "children": [
+                {
+                    "name": "Explicitly for research",
+                    "uid": "RSE-taxonomy-explicitly-for-research",
+                    "children": [
+                        {
+                            "name": "Workflow managers",
+                            "uid": "RSE-taxonomy-workflow-managers",
+                            "size": 12
+                        },
+                        {
+                            "name": "Interactive development environments for research",
+                            "uid": "RSE-taxonomy-ide-research",
+                            "example": "Matlab, Jupyter",
+                            "size": 12
+                        },
+                        {
+                            "name": "Provenance and metadata collection tools",
+                            "uid": "RSE-taxonomy-provenance-metadata-tools",
+                            "size": 12
+                        }
+                    ],
+                    "size": 12
+                },
+                {
+                    "name": "Used for research but not explicitly for it",
+                    "uid": "RSE-taxonomy-used-not-explicitly-for",
+                    "children": [
+                        {
+                            "name": "Databases",
+                            "uid": "RSE-taxonomy-databases",
+                            "size": 12
+                        },
+                        {
+                            "name": "Application Programming Interfaces",
+                            "uid": "RSE-taxonomy-application-programming-interfaces",
+                            "size": 12
+                        },
+                        {
+                            "name": "Frameworks",
+                            "uid": "RSE-taxonomy-frameworks",
+                            "example": "to generate documentation, content management systems",
+                            "size": 12
+                        }
+                    ],
+                    "size": 12
+                },
+                {
+                    "name": "Incidentally used for research",
+                    "uid": "RSE-taxonomy-incidentally-used-for-research",
+                    "children": [
+                        {
+                            "name": "Operating systems",
+                            "uid": "RSE-taxonomy-operating-systems",
+                            "size": 12
+                        },
+                        {
+                            "name": "Personal scheduling and task management",
+                            "uid": "RSE-taxonomy-personal-scheduling-task-management",
+                            "size": 12
+                        },
+                        {
+                            "name": "Version control",
+                            "uid": "RSE-taxonomy-version-control",
+                            "size": 12
+                        },
+                        {
+                            "name": "Text editors and integrated development environments",
+                            "uid": "RSE-taxonomy-text-editors-ides",
+                            "size": 12
+                        },
+                        {
+                            "name": "Communication tools or platforms",
+                            "uid": "RSE-taxonomy-communication-tools",
+                            "example": "email, slack, etc.",
+                            "size": 12
+                        }
+                    ],
+                    "size": 12
+                }
+            ],
+            "size": 12
+        }
+    ]
+}

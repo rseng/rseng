@@ -11,10 +11,11 @@ with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from rseng.main.taxonomy import Taxonomy
 from rseng.main.criteria import CriteriaSet
 from rseng.main.templates import get_template
-from rseng.utils.file import write_file
+from rseng.utils.file import write_file, write_json
 
 from datetime import datetime
 from jinja2 import Template
+from copy import deepcopy
 import logging
 import os
 import re
@@ -29,13 +30,15 @@ class ResearchSoftware:
        for research software, and generate documentation files for them.
     """
 
-    def __init__(self, version=None):
+    def __init__(self, version="latest"):
         """create a software repository. We take a config file, which should
            sit at the root of the repository, and then parse the subfolders
            accordingly.
         """
         self.taxonomy = Taxonomy(version=version)
         self.criteria = CriteriaSet(version=version)
+
+    # Taxonomy Export
 
     def export_taxonomy_markdown(
         self, outdir=None, template="taxonomy-metadata-template.md", force=False
@@ -69,6 +72,30 @@ class ResearchSoftware:
             files.append(output)
 
         return files
+
+    def export_taxonomy_json(self, outfile=None, force=False, size=12):
+        """Given an output json file, export the taxonomy d3 data. In the future,
+           sizes could be customized based on importance, etc.
+        """
+        outfile = outfile or "taxonomy.json"
+
+        # If the output file exists and force is false, exit early
+        if not force and os.path.exists(outfile):
+            sys.exit(f"{outfile} exists, use --force to overwrite.")
+
+        # Make a copy of nodes before editing
+        tree = deepcopy(self.taxonomy.tree)
+        for uid, node in self.taxonomy.nodes.items():
+            node["size"] = size
+
+        # Generate the tree in the typical d3.js format
+        root = {"name": "root", "children": self.taxonomy.tree}
+
+        # Restore original tree (without sizes)
+        self.taxonomy.tree = tree
+        return write_json(root, outfile)
+
+    # Criteria Export
 
     def export_criteria_markdown(
         self, outdir, template="criteria-metadata-template.md", force=False

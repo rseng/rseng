@@ -52,7 +52,10 @@ def get_parser():
     )
 
     generate.add_argument(
-        "type", help="Type to generate", choices=["taxonomy", "criteria"], nargs="?",
+        "type",
+        help="Type to generate",
+        choices=["taxonomy", "criteria", "taxonomy-json"],
+        nargs="?",
     )
 
     generate.add_argument(

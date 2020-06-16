@@ -21,8 +21,13 @@ def main(args, extra):
     client = ResearchSoftware(version=args.ver)
 
     if args.type == "taxonomy":
-        files = client.export_taxonomy_markdown(args.path)
+        files = client.export_taxonomy_markdown(args.path, force=args.force)
+        print("\n".join(files))
+    elif args.type == "taxonomy-json":
+        filename = client.export_taxonomy_json(args.path, force=args.force)
+        print(filename)
+    elif args.type == "criteria":
+        files = client.export_criteria_markdown(args.path, force=args.force)
         print("\n".join(files))
     else:
-        files = client.export_criteria_markdown(args.path)
-        print("\n".join(files))
+        print("Please specify an export type as the first argument.")

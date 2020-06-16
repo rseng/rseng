@@ -97,7 +97,7 @@ for criteria in cset:
 
 ### Taxonomy
 
-Taxonomy are interacted with in a similar fashion.
+The taxonomy is interacted with in a similar fashion.
 
 ```python
 from rseng.main.taxonomy import Taxonomy
@@ -186,7 +186,13 @@ docs/_criteria/RSE-usage.md
 docs/_criteria/RSE-absence.md
 ```
 
+You can also generate a (non flat) version of the taxonomy, specifically a json
+file that plugs easily into the d3 hierarchy plots.
 
+```
+# rseng generate taxonomy-json <filename>
+$ rseng generate taxonomy-json taxonomy.json
+```
 
 
 ## License
