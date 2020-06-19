@@ -1,8 +1,8 @@
 ---
 name:  "Frameworks"
-date: "2020-06-19 15:10:05"
+date: "2020-06-19 15:18:09"
 uid: "RSE-taxonomy-frameworks"
-path: "Software to support research >> Used for research but not explicitly for it >> Frameworks"
+level: "Software to support research >> Used for research but not explicitly for it >> Frameworks"
 example: "to generate documentation, content management systems" 
 ---
 

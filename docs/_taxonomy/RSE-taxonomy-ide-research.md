@@ -1,8 +1,8 @@
 ---
 name:  "Interactive development environments for research"
-date: "2020-06-19 15:10:05"
+date: "2020-06-19 15:18:09"
 uid: "RSE-taxonomy-ide-research"
-path: "Software to support research >> Explicitly for research >> Interactive development environments for research"
+level: "Software to support research >> Explicitly for research >> Interactive development environments for research"
 example: "Matlab, Jupyter" 
 ---
 
