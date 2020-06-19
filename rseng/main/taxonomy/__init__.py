@@ -59,11 +59,6 @@ class Taxonomy:
     def __repr__(self):
         return self.__str__()
 
-    def export(self):
-        """export will export a flat structure of the tree
-        """
-        pass
-
     def flatten(self):
         out = {}
 

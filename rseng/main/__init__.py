@@ -62,6 +62,7 @@ class ResearchSoftware:
             instance = Template(template)
             result = instance.render(
                 name=node.get("name", ""),
+                path=path,
                 updated_at=now,
                 uid=node.get("uid", ""),
                 example=node.get("example"),
