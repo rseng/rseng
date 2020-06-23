@@ -1,6 +1,7 @@
 # Research Software Engineering
 
 [![PyPI version](https://badge.fury.io/py/rseng.svg)](https://badge.fury.io/py/rseng)
+[![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/) [![https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg](https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg)](https://good-labs.github.io/greater-good-affirmation)
 
 Criteria and taxonomy for research software engineering (rseng).
 
