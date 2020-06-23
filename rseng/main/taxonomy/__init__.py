@@ -8,9 +8,10 @@ with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 """
 
-from rseng.utils.file import read_yaml
+from rseng.utils.file import read_yaml, write_file
 import logging
 import os
+import sys
 
 here = os.path.dirname(os.path.abspath(__file__))
 bot = logging.getLogger("rseng.main.taxonomy")
@@ -38,6 +39,10 @@ class Taxonomy:
             raise FileNotFoundError
 
         self.load(data_file)
+
+    @property
+    def count(self):
+        return len(self.nodes)
 
     def export(self, filename=None, force=True, sep="\t"):
         """save taxonomy to human readable file

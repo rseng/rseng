@@ -14,5 +14,6 @@ and **Merged pull requests**. Critical items to know are:
 The versions coincide with releases on pip.
 
 ## [0.2.x](https://github.com/rseng/rseng/tree/master) (0.0.x)
+ - adding criteria/taxonomy GitHub issue template generation (0.0.11)
  - adding first go at criteria and taxonomy (0.0.1)
  - skeleton release (0.0.0)

@@ -10,9 +10,8 @@ with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 from rseng.main import ResearchSoftware
 import logging
-import os
 
-bot = logging.getLogger("rse.client")
+bot = logging.getLogger("rseng.client")
 
 
 def main(args, extra):
@@ -29,5 +28,15 @@ def main(args, extra):
     elif args.type == "criteria":
         files = client.export_criteria_markdown(args.path, force=args.force)
         print("\n".join(files))
+    elif args.type == "criteria-annotation-template":
+        filename = client.export_criteria_annotation_template(
+            args.path or "annotate-criteria-template.md", force=args.force
+        )
+        print(filename)
+    elif args.type == "taxonomy-annotation-template":
+        filename = client.export_taxonomy_annotation_template(
+            args.path or "annotate-taxonomy-template.md", force=args.force
+        )
+        print(filename)
     else:
         print("Please specify an export type as the first argument.")
