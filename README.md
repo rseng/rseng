@@ -317,7 +317,9 @@ Software to support research >> Incidentally used for research >> Communication 
 ```
 
 Example in the wild include [this one for criteria](https://github.com/rseng/software/blob/master/.github/ISSUE_TEMPLATE/annotate-criteria.md) and [this one for the taxonomy](https://github.com/rseng/software/blob/master/.github/ISSUE_TEMPLATE/annotate-taxonomy.md).
-
+Note that you should add the templates along with creating labels, one for each
+of `taxonomy` and `criteria`. A workflow to automatically update criteria/taxonomy items
+is being written and will be added soon.
 
 ## License
 
