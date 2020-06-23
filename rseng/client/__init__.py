@@ -54,7 +54,13 @@ def get_parser():
     generate.add_argument(
         "type",
         help="Type to generate",
-        choices=["taxonomy", "criteria", "taxonomy-json"],
+        choices=[
+            "taxonomy",
+            "criteria",
+            "taxonomy-json",
+            "criteria-annotation-template",
+            "taxonomy-annotation-template",
+        ],
         nargs="?",
     )
 
@@ -113,22 +119,18 @@ def main():
 
     # Show the version and exit
     if args.command == "version" or args.version:
-        print(rse.__version__)
+        print(rseng.__version__)
         sys.exit(0)
 
     # Does the user want a shell?
+    main = None
     if args.command == "generate":
         from .generate import main
 
-    # Pass on to the correct parser
-    return_code = 0
-    # try:
-    main(args=args, extra=extra)
-    sys.exit(return_code)
-    # except UnboundLocalError:
-    #    return_code = 1
-
-    help(return_code)
+    if main is not None:
+        main(args=args, extra=extra)
+    else:
+        help()
 
 
 if __name__ == "__main__":

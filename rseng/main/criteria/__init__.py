@@ -8,10 +8,11 @@ with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 """
 
-from rseng.utils.file import read_file
+from rseng.utils.file import read_file, write_file
 
 import logging
 import os
+import sys
 
 here = os.path.dirname(os.path.abspath(__file__))
 bot = logging.getLogger("rseng.main.criteria")
@@ -39,6 +40,10 @@ class CriteriaSet:
             raise FileNotFoundError
 
         self.load(data_file, sep)
+
+    @property
+    def count(self):
+        return len(self.criteria)
 
     def export(self, filename=None, force=True, sep="\t"):
         """save criteria to a file.
@@ -90,7 +95,7 @@ class Criteria:
             options = options.split(",")
         self.options = options
 
-    def export(self, sep):
+    def export(self, sep="\t"):
         """Given a separator, export a criteria to a line to write to file
         """
         return "{}{}{}{}{}".format(

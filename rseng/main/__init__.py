@@ -18,10 +18,9 @@ from jinja2 import Template
 from copy import deepcopy
 import logging
 import os
-import re
 import sys
 
-bot = logging.getLogger("rse.main")
+bot = logging.getLogger("rseng.main")
 now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
@@ -96,6 +95,36 @@ class ResearchSoftware:
         self.taxonomy.tree = tree
         return write_json(root, outfile)
 
+    def export_taxonomy_annotation_template(
+        self, outfile, template="annotate-taxonomy-template.md", force=False
+    ):
+        """Export a markdown template for a taxonomy annotation (as GitHub issue)
+        """
+        items = ["%s\n%s\n" % (v["uid"], k) for k, v in self.taxonomy.flatten().items()]
+        return self.export_annotation_template(
+            template=template, items=items, outfile=outfile, force=force
+        )
+
+    # Annotation template
+
+    def export_annotation_template(self, template, items, outfile=None, force=False):
+        """Given an output directory and a template name, export a set of
+           markdown files for each criteria or taxonomy item.
+        """
+        # If output folder not provided, assume _taxonomy in $PWD
+        template = get_template(template)
+
+        # If the output file exists and force is false, exit early
+        if outfile and not force and os.path.exists(outfile):
+            sys.exit(f"{outfile} exists, use --force to overwrite.")
+
+        instance = Template(template)
+        result = instance.render(items=items)
+        if outfile:
+            write_file(outfile, result)
+            return outfile
+        return result
+
     # Criteria Export
 
     def export_criteria_markdown(
@@ -128,3 +157,14 @@ class ResearchSoftware:
             files.append(output)
 
         return files
+
+    def export_criteria_annotation_template(
+        self, outfile, template="annotate-criteria-template.md", force=False
+    ):
+        """Given an output directory and a template name, export a set of
+           markdown files for each criteria
+        """
+        items = [c.uid for c in self.criteria]
+        return self.export_annotation_template(
+            template=template, items=items, outfile=outfile, force=force
+        )
