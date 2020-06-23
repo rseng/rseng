@@ -2,7 +2,7 @@
 name: Annotate Criteria
 about: Select this template to annotate criteria for a software repository
 title: "[CRITERIA]"
-labels: ''
+labels: 'criteria'
 assignees: ''
 ---
 
