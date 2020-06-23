@@ -164,7 +164,7 @@ class ResearchSoftware:
         """Given an output directory and a template name, export a set of
            markdown files for each criteria
         """
-        items = [c.uid for c in self.criteria]
+        items = ["%s\n%s\n" % (c.uid, c.question) for c in self.criteria]
         return self.export_annotation_template(
             template=template, items=items, outfile=outfile, force=force
         )
