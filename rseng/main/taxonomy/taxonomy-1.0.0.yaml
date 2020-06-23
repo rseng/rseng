@@ -17,7 +17,7 @@
     uid: RSE-taxonomy-general-software
     children:
     - name: Numerical libraries
-      uid: RSE-taxonomy-numerical libraries
+      uid: RSE-taxonomy-numerical-libraries
       example: includes optimization, statistics, simulation, e.g., numpy
     - name: Data collection
       uid: RSE-taxonomy-data-collection
