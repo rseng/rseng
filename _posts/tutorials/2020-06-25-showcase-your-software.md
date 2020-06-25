@@ -18,7 +18,7 @@ If you are faculty, student, or some research staff that maintains a set of
 software, you might want to have a place to share this set, meaning a version
 controlled record (GitHub repository) and web interfaces to interact with it.
 
-![{{ site.baseurl }}assets/img/posts/showcase/dashboard.png]({{ site.baseurl }}assets/img/posts/showcase/dashboard.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/dashboard.png]({{ site.baseurl }}/assets/img/posts/showcase/dashboard.png)
 
 ## 1. Install the Research Software Encyclopedia
 
@@ -174,26 +174,26 @@ and taxonomy items defined when you generated the interface, along with your lis
 of software. For each, you can click on the owl (🦉️) to annotate for taxonomy 
 categories, or the check (✔️) to annotate for criteria. Here is annotating for the criteria:
 
-![{{ site.baseurl }}assets/img/posts/showcase/annotate-criteria.png]({{ site.baseurl }}assets/img/posts/showcase/annotate-criteria.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/annotate-criteria.png]({{ site.baseurl }}/assets/img/posts/showcase/annotate-criteria.png)
 
 And here is for annotating for the taxonomy:
 
-![{{ site.baseurl }}assets/img/posts/showcase/annotate-taxonomy.png]({{ site.baseurl }}assets/img/posts/showcase/annotate-taxonomy.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/annotate-taxonomy.png]({{ site.baseurl }}/assets/img/posts/showcase/annotate-taxonomy.png)
 
 In both cases, clicking submit will open an issue that (when you post it)
 will trigger a workflow to open a pull request and complete the annotation
 on behalf of your username. Here are example issues generated:
 
-![{{ site.baseurl }}assets/img/posts/showcase/criteria-issue.png]({{ site.baseurl }}assets/img/posts/showcase/criteria-issue.png)
-![{{ site.baseurl }}assets/img/posts/showcase/taxonomy-issue.png]({{ site.baseurl }}assets/img/posts/showcase/taxonomy-issue.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/criteria-issue.png]({{ site.baseurl }}/assets/img/posts/showcase/criteria-issue.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/taxonomy-issue.png]({{ site.baseurl }}/assets/img/posts/showcase/taxonomy-issue.png)
 
 And the subsequent pull requests generated! You can see both at [rseng/software-example](https://github.com/rseng/software-example/pulls).
 
-![{{ site.baseurl }}assets/img/posts/showcase/pr.png]({{ site.baseurl }}assets/img/posts/showcase/pr.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/pr.png]({{ site.baseurl }}/assets/img/posts/showcase/pr.png)
 
 And any user can [open an issue](https://github.com/rseng/software-example/issues/new/choose) using your template to accomplish the same. Cool!
 
-![{{ site.baseurl }}assets/img/posts/showcase/issue.png]({{ site.baseurl }}assets/img/posts/showcase/issue.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/issue.png]({{ site.baseurl }}/assets/img/posts/showcase/issue.png)
 
 ### 6. Add Issue Templates and Annotation
 
