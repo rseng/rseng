@@ -36,7 +36,7 @@
                     "children": [
                         {
                             "name": "Numerical libraries",
-                            "uid": "RSE-taxonomy-numerical libraries",
+                            "uid": "RSE-taxonomy-numerical-libraries",
                             "example": "includes optimization, statistics, simulation, e.g., numpy",
                             "size": 12
                         },
