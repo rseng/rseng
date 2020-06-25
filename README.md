@@ -13,7 +13,14 @@ This repository serves a taxonomy and criteria for research software,
 intended to be used with the [research software encyclopedia](https://github.com/rseng/rse).
 The two are maintained separately for development, and because it might
 be the case that the criteria and taxonomy would want to be used separately
-from the encyclopedia.
+from the encyclopedia. 
+
+## How do I contribute?
+
+You can edit [taxonomy](rseng/main/taxonomy) or [criteria](rseng/main/criteria) items 
+by way of opening a pull request against the master branch. When it is merged,
+an [automated task](https://github.com/rseng/rseng/blob/master/.github/workflows/staging.yml)
+will update the interface served at [https://rseng.github.io/rseng](https://rseng.github.io/rseng). You can also interact with the rseng software for your own needs, shown below.
 
 ## Usage
 
