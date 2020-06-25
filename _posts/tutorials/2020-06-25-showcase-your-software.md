@@ -18,6 +18,8 @@ If you are faculty, student, or some research staff that maintains a set of
 software, you might want to have a place to share this set, meaning a version
 controlled record (GitHub repository) and web interfaces to interact with it.
 
+![../img/showcase/dashboard.png](../img/showcase/dashboard.png)
+
 ## 1. Install the Research Software Encyclopedia
 
 You can first install the rse software with pip:
@@ -167,6 +169,32 @@ docs/
 21 directories, 18 files
 ```
 
+The interface portal is shown at the top of the post! From there you can see criteria
+and taxonomy items defined when you generated the interface, along with your list
+of software. For each, you can click on the owl (🦉️) to annotate for taxonomy 
+categories, or the check (✔️) to annotate for criteria. Here is annotating for the criteria:
+
+![../img/showcase/annotate-criteria.png](../img/showcase/annotate-criteria.png)
+
+And here is for annotating for the taxonomy:
+
+![../img/showcase/annotate-taxonomy.png](../img/showcase/annotate-taxonomy.png)
+
+In both cases, clicking submit will open an issue that (when you post it)
+will trigger a workflow to open a pull request and complete the annotation
+on behalf of your username. Here are example issues generated:
+
+![../img/showcase/criteria-issue.png](../img/showcase/criteria-issue.png)
+![../img/showcase/taxonomy-issue.png](../img/showcase/taxonomy-issue.png)
+
+And the subsequent pull requests generated! You can see both at [rseng/software-example](https://github.com/rseng/software-example/pulls).
+
+![../img/showcase/pr.png](../img/showcase/pr.png)
+
+And any user can [open an issue](https://github.com/rseng/software-example/issues/new/choose) using your template to accomplish the same. Cool!
+
+![../img/showcase/issue.png](../img/showcase/issue.png)
+
 ### 6. Add Issue Templates and Annotation
 
 If you add a set of templates and a GitHub workflow that knows how to
@@ -181,7 +209,7 @@ wget https://raw.githubusercontent.com/rseng/software/master/.github/ISSUE_TEMPL
 wget https://raw.githubusercontent.com/rseng/software/master/.github/ISSUE_TEMPLATE/annotate-taxonomy.md
 
 cd ../workflows
-wget https://github.com/rseng/software/blob/master/.github/workflows/issue-annotation.yml
+wget https://raw.githubusercontent.com/rseng/software/master/.github/workflows/issue-annotation.yml
 ```
 
 You might also want some ability to run a job and update your software, or just refresh
