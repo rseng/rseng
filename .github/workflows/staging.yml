@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    env:
+      RSE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup testing environment
+        run: conda create --quiet --name rseng
+      - name: Install rseng 
+        run: |
+          export PATH="/usr/share/miniconda/bin:$PATH"
+          source activate rseng
+          pip install -e .[all]
+      - name: Update GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export PATH="/usr/share/miniconda/bin:$PATH"
+          source activate rseng
+          printf "GitHub Actor: ${GITHUB_ACTOR}\n"
+          export BRANCH_FROM="gh-pages"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git branch
+          git checkout "${BRANCH_FROM}"
+          git branch
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          rm -rf _criteria
+          rm -rf _taxonomy
+          /bin/bash ./generate.sh
+          git add _taxonomy/*
+          git add _criteria/*
+
+          if git diff-index --quiet HEAD --; then
+             printf "No changes\n"
+          else
+             printf "Changes\n"
+             git commit -m "Automated deployment to update taxonomy and criteria $(date '+%Y-%m-%d')"
+             git push origin "${BRANCH_FROM}"
+          fi
