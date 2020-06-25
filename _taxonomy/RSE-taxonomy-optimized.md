@@ -1,6 +1,6 @@
 ---
 name:  "Domain-specific optimized software"
-date: "2020-06-25 17:47:38"
+date: "2020-06-25 17:52:58"
 uid: "RSE-taxonomy-optimized"
 level: "Software to directly conduct research >> Domain-specific software >> Domain-specific optimized software"
 example: "neuroscience software optimized for GPU" 

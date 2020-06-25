@@ -1,6 +1,6 @@
 ---
 name:  "Communication tools or platforms"
-date: "2020-06-25 17:47:38"
+date: "2020-06-25 17:52:58"
 uid: "RSE-taxonomy-communication-tools"
 level: "Software to support research >> Incidentally used for research >> Communication tools or platforms"
 example: "email, slack, etc." 
