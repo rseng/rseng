@@ -1,4 +1,4 @@
-name: CI
+name: update-gh-pages
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
         run: |
           export PATH="/usr/share/miniconda/bin:$PATH"
           source activate rseng
-          pip install -e .[all]
+          pip install .[all]
       - name: Update GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,6 +31,7 @@ jobs:
           git branch
           git fetch
           git checkout "${BRANCH_FROM}"
+          git pull origin "${BRANCH_FROM}" || true
           git branch
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@users.noreply.github.com"
