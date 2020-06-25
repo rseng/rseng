@@ -29,6 +29,7 @@ jobs:
           export BRANCH_FROM="gh-pages"
           git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git branch
+          git fetch
           git checkout "${BRANCH_FROM}"
           git branch
           git config --global user.name "github-actions"
