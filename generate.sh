@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# rm -rf docs/_criteria
-# rm -rf docs/_taxonomy
-rseng generate taxonomy docs/_taxonomy
-rseng generate taxonomy docs/_criteria
-rseng generate taxonomy-json docs/_taxonomy/taxonomy.json
+# rm -rf _criteria
+# rm -rf _taxonomy
+rseng generate taxonomy _taxonomy
+rseng generate criteria _criteria
+rseng generate taxonomy-json _taxonomy/taxonomy.json

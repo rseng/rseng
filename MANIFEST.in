@@ -1,5 +1,0 @@
-include README.md LICENSE
-recursive-include rseng *
-recursive-exclude * __pycache__
-recursive-exclude * *.pyc
-recursive-exclude * *.pyo
