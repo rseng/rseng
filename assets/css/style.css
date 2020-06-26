@@ -37,6 +37,11 @@ ul > li {
   color: #333;
 }
 
+ol > li {
+  color: #333;
+}
+
+
 .lobster-font {
     font-family: Lobster, cursive;
 }
