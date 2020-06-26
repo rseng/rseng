@@ -63,6 +63,7 @@ class ResearchSoftware:
                 name=node.get("name", ""),
                 path=path,
                 updated_at=now,
+                color=node.get("color", ""),
                 uid=node.get("uid", ""),
                 example=node.get("example"),
                 content=path,
