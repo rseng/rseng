@@ -180,20 +180,7 @@ And here is for annotating for the taxonomy:
 
 ![{{ site.baseurl }}/assets/img/posts/showcase/annotate-taxonomy.png]({{ site.baseurl }}/assets/img/posts/showcase/annotate-taxonomy.png)
 
-In both cases, clicking submit will open an issue that (when you post it)
-will trigger a workflow to open a pull request and complete the annotation
-on behalf of your username. Here are example issues generated:
-
-![{{ site.baseurl }}/assets/img/posts/showcase/criteria-issue.png]({{ site.baseurl }}/assets/img/posts/showcase/criteria-issue.png)
-![{{ site.baseurl }}/assets/img/posts/showcase/taxonomy-issue.png]({{ site.baseurl }}/assets/img/posts/showcase/taxonomy-issue.png)
-
-And the subsequent pull requests generated! You can see both at [rseng/software-example](https://github.com/rseng/software-example/pulls).
-
-![{{ site.baseurl }}/assets/img/posts/showcase/pr.png]({{ site.baseurl }}/assets/img/posts/showcase/pr.png)
-
-And any user can [open an issue](https://github.com/rseng/software-example/issues/new/choose) using your template to accomplish the same. Cool!
-
-![{{ site.baseurl }}/assets/img/posts/showcase/issue.png]({{ site.baseurl }}/assets/img/posts/showcase/issue.png)
+Continue reading to see how these interfaces can trigger an automated workflow to annotate your database.
 
 ### 6. Add Issue Templates and Annotation
 
@@ -211,6 +198,23 @@ wget https://raw.githubusercontent.com/rseng/software/master/.github/ISSUE_TEMPL
 cd ../workflows
 wget https://raw.githubusercontent.com/rseng/software/master/.github/workflows/issue-annotation.yml
 ```
+
+After these templates are added, when a visitor clicks submit on your interface
+served on GitHub pages, it will open an issue that (when posted)
+will trigger a workflow to open a pull request and complete the annotation
+on behalf of the user's username. Here are example issues generated:
+
+![{{ site.baseurl }}/assets/img/posts/showcase/criteria-issue.png]({{ site.baseurl }}/assets/img/posts/showcase/criteria-issue.png)
+![{{ site.baseurl }}/assets/img/posts/showcase/taxonomy-issue.png]({{ site.baseurl }}/assets/img/posts/showcase/taxonomy-issue.png)
+
+And the subsequent pull requests generated! You can see both at [rseng/software-example](https://github.com/rseng/software-example/pulls).
+
+![{{ site.baseurl }}/assets/img/posts/showcase/pr.png]({{ site.baseurl }}/assets/img/posts/showcase/pr.png)
+
+And any user can [open an issue](https://github.com/rseng/software-example/issues/new/choose) using your template to accomplish the same. Cool!
+
+![{{ site.baseurl }}/assets/img/posts/showcase/issue.png]({{ site.baseurl }}/assets/img/posts/showcase/issue.png)
+
 
 You might also want some ability to run a job and update your software, or just refresh
 the interface. Take a look at the templates [here](https://github.com/rseng/software/tree/master/.github/workflows) for ideas (and please [open an issue](https://github.com/rseng/software/issues)  if you need help!).
