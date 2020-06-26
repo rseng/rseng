@@ -45,6 +45,9 @@ def test_taxonomy(tmp_path):
     assert tax.count >= 24
     for name in tax.flatten():
         print(name)
+    seen_colors = set()
     for name, item in tax.flatten().items():
-        for key in ["uid", "name"]:
+        for key in ["uid", "name", "color"]:
             assert key in item
+        assert item["color"] not in seen_colors
+        seen_colors.add(item["color"])

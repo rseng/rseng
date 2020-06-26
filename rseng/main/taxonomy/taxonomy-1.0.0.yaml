@@ -1,64 +1,88 @@
 - name: Software to directly conduct research
   uid: RSE-taxonomy-conduct-research
+  color: darkblue
   children: 
   - name: Domain-specific software
     uid: RSE-taxonomy-domain-specific
+    color: darkcyan
     children:
     - name: Domain-specific hardware
       uid: RSE-taxonomy-domain-hardware
       example: software for physics to control lab equipment 
+      color: darkgray
     - name: Domain-specific optimized software
       uid: RSE-taxonomy-optimized
       example: neuroscience software optimized for GPU
+      color: darkolivegreen
     - name: Domain-specific analysis software
       uid: RSE-taxonomy-analysis
       example: SPM, fsl, afni for neuroscience
+      color: darkorange
   - name: General software
     uid: RSE-taxonomy-general-software
+    color: darkgoldenrod
     children:
     - name: Numerical libraries
       uid: RSE-taxonomy-numerical-libraries
       example: includes optimization, statistics, simulation, e.g., numpy
+      color: darkorchid
     - name: Data collection
       uid: RSE-taxonomy-data-collection
       example: web-based experiments or portals
+      color: darksalmon
     - name: Visualization
       uid: RSE-taxonomy-visualization
       example: interfaces to interact with, understand, and see data, plotting tools
+      color: darkviolet
 - name: Software to support research
   uid: RSE-taxonomy-support-research
+  color: darkgreen
   children:
   - name: Explicitly for research
     uid: RSE-taxonomy-explicitly-for-research
+    color: mediumpurple
     children:
     - name: Workflow managers
       uid: RSE-taxonomy-workflow-managers
+      color: mediumaquamarine
     - name: Interactive development environments for research
       uid: RSE-taxonomy-ide-research
       example: Matlab, Jupyter
+      color: mediumorchid
     - name: Provenance and metadata collection tools
       uid: RSE-taxonomy-provenance-metadata-tools
+      color: mediumseagreen
   - name: Used for research but not explicitly for it
     uid: RSE-taxonomy-used-not-explicitly-for
+    color: darkslateblue
     children: 
     - name: Databases
       uid: RSE-taxonomy-databases
+      color: darkkhaki
     - name: Application Programming Interfaces
       uid: RSE-taxonomy-application-programming-interfaces
+      color: darkturquoise
     - name: Frameworks
       uid: RSE-taxonomy-frameworks
       example: to generate documentation, content management systems
+      color: darkseagreen
   - name: Incidentally used for research
     uid: RSE-taxonomy-incidentally-used-for-research
+    color: darkmagenta
     children: 
     - name: Operating systems
       uid: RSE-taxonomy-operating-systems
+      color: mediumspringgreen
     - name: Personal scheduling and task management
       uid: RSE-taxonomy-personal-scheduling-task-management 
+      color: darkred
     - name: Version control
       uid: RSE-taxonomy-version-control
+      color: mediumblue
     - name: Text editors and integrated development environments
       uid: RSE-taxonomy-text-editors-ides
+      color: mediumslateblue
     - name: Communication tools or platforms
       uid: RSE-taxonomy-communication-tools
       example: email, slack, etc.
+      color: mediumturquoise
