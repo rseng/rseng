@@ -151,6 +151,16 @@ Software to support research >> Incidentally used for research >> Text editors a
 Software to support research >> Incidentally used for research >> Communication tools or platforms
 ```
 
+As of version 0.0.13 there are assigned colors for each taxonomy item to ensure
+more consistency across interface generation. The colors to choose from
+can be imported from `rse.utils.colors.browser_palette`, and include those
+with "medium" or "dark" in the name. This one hasn't been used yet, and the
+list should be consulted for others.
+
+```
+mediumvioletred
+```
+
 ### Generate
 
 After you install rseng, the `rseng` executable should be in your path.
