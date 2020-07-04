@@ -24,11 +24,11 @@
     children:
     - name: Numerical libraries
       uid: RSE-taxonomy-numerical-libraries
-      example: includes optimization, statistics, simulation, e.g., numpy
+      example: includes optimization, statistics, simulation, e.g., numpy, scikit-learn
       color: darkorchid
     - name: Data collection
       uid: RSE-taxonomy-data-collection
-      example: web-based experiments or portals
+      example: web-based experiments or portals, command line clients or libraries
       color: darksalmon
     - name: Visualization
       uid: RSE-taxonomy-visualization
@@ -45,26 +45,30 @@
     - name: Workflow managers
       uid: RSE-taxonomy-workflow-managers
       color: mediumaquamarine
+      example: snakemake, cromwell, nextflow, slurm, etc.
     - name: Interactive development environments for research
       uid: RSE-taxonomy-ide-research
-      example: Matlab, Jupyter
+      example: Matlab, Jupyter, Rstudio
       color: mediumorchid
     - name: Provenance and metadata collection tools
       uid: RSE-taxonomy-provenance-metadata-tools
       color: mediumseagreen
+      example: schema.org, codemeta, etc.
   - name: Used for research but not explicitly for it
     uid: RSE-taxonomy-used-not-explicitly-for
     color: darkslateblue
     children: 
     - name: Databases
       uid: RSE-taxonomy-databases
+      example: container registry, software database, data text files, etc.
       color: darkkhaki
     - name: Application Programming Interfaces
       uid: RSE-taxonomy-application-programming-interfaces
       color: darkturquoise
+      example: Pubmed, arXiv, Orcid, etc.
     - name: Frameworks
       uid: RSE-taxonomy-frameworks
-      example: to generate documentation, content management systems
+      example: documentation generators, content management systems, django
       color: darkseagreen
   - name: Incidentally used for research
     uid: RSE-taxonomy-incidentally-used-for-research
@@ -73,15 +77,19 @@
     - name: Operating systems
       uid: RSE-taxonomy-operating-systems
       color: mediumspringgreen
+      example: linux
     - name: Personal scheduling and task management
       uid: RSE-taxonomy-personal-scheduling-task-management 
       color: darkred
+      example: Asana, Trello, etc. 
     - name: Version control
       uid: RSE-taxonomy-version-control
+      example: git, svn
       color: mediumblue
     - name: Text editors and integrated development environments
       uid: RSE-taxonomy-text-editors-ides
       color: mediumslateblue
+      example: atom, gedit, vim
     - name: Communication tools or platforms
       uid: RSE-taxonomy-communication-tools
       example: email, slack, etc.
