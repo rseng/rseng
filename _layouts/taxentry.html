@@ -14,6 +14,7 @@ layout: base
             
             <div id="recipe">
             {{ content | safe }}
+            {% if page.example %}<strong>Example:</strong> {{ page.example }}{% endif %}
             </div>
 
         </div>

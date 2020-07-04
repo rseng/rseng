@@ -42,7 +42,7 @@ exclude_from_search: true
                    src="{{ "/assets/img/taxonomy.png" | prepend: site.baseurl }}">
                    <a class="post-link" 
                      href="{{ item.url | prepend: site.baseurl }}">{{ item.name }}</a></h2>
-                   <p style="font-size:14px;color:#999; margin-left:25px; margin-top:20px">{{ item.date | date: "%b %-d, %Y" }}</p>
+                   {% if item.example %}<p style="font-size:14px;color:#999; margin-left:25px; margin-top:20px"><strong>Examples</strong>: {{ item.example }}</p>{% endif %}
             {% endfor %}
         </div>
     </div>
