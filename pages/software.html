@@ -23,11 +23,15 @@ exclude_from_search: true
        {% if currentDate != myDate %}
            {% unless forloop.first %}</ul>{% endunless %}
            <h1 style="margin-top:20px; margin-bottom:10px">{{ currentDate }}</h1>
-           <ul>
+           <div class="row">
            {% assign myDate = currentDate %}
        {% endif %}
-       <li><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a> <a target="_blank" style="float:right; padding-left:10px" href="{{ post.annotate_criteria }}"><button class="btn btn-sm btn-primary">Annotate Criteria</button></a><a target="_blank" style="float:right" href="{{ post.annotate_taxonomy }}"><button class="btn btn-sm btn-primary">Annotate Taxonomy</button></a></li>
-       {% if forloop.last %}</ul>{% endif %}
+            <div class="col-md-3">
+               <a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a></div>
+            <div class="col-md-9">
+<a target="_blank" style="padding-right:10px" href="{{ post.annotate_criteria }}"><span class="badge badge-info">Annotate Criteria</span></a><a target="_blank" href="{{ post.annotate_taxonomy }}"><span class="badge badge-info">Annotate Taxonomy</span></a>
+            </div>
+       {% if forloop.last %}</div>{% endif %}
    {% endfor %}
         </div>
     </div>
