@@ -1,0 +1,34 @@
+---
+title: Software Survey
+description: "Archive of Software Survey Posts"
+layout: base
+permalink: /software/
+tipue_search_active: true
+exclude_from_search: true
+---
+
+{% include scrolltop.html %}
+<div class="row" style="margin:25px; padding:30px">
+    <div class="col-lg-10">
+        <hr id="block-criteria">
+        <div>
+            <div class="row" style='margin-top:40px'>
+                <div class="col-md-8">
+                    <h4 class="list-group-item-heading" style="font-weight:600;font-size:60px;color: #428bca">Weekly Software Survey</h4>
+                </div>
+            </div>
+   {% assign posts = site.posts | where_exp: "post", "post.categories contains 'Software'" %}
+   {% for post in posts %}
+       {% assign currentDate = post.date | date: "%Y" %}
+       {% if currentDate != myDate %}
+           {% unless forloop.first %}</ul>{% endunless %}
+           <h1 style="margin-top:20px; margin-bottom:10px">{{ currentDate }}</h1>
+           <ul>
+           {% assign myDate = currentDate %}
+       {% endif %}
+       <li><a href="{{ site.baseurl }}{{ post.url }}"><span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a> <a target="_blank" style="float:right; padding-left:10px" href="{{ post.annotate_criteria }}"><button class="btn btn-sm btn-primary">Annotate Criteria</button></a><a target="_blank" style="float:right" href="{{ post.annotate_taxonomy }}"><button class="btn btn-sm btn-primary">Annotate Taxonomy</button></a></li>
+       {% if forloop.last %}</ul>{% endif %}
+   {% endfor %}
+        </div>
+    </div>
+</div>
