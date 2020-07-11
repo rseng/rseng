@@ -143,6 +143,13 @@
                             "size": 12
                         },
                         {
+                            "name": "Package Management",
+                            "uid": "RSE-taxonomy-package-management",
+                            "color": "indianred",
+                            "example": "spack, apt, yum, npm",
+                            "size": 12
+                        },
+                        {
                             "name": "Personal scheduling and task management",
                             "uid": "RSE-taxonomy-personal-scheduling-task-management",
                             "color": "darkred",

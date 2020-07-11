@@ -1,6 +1,6 @@
 ---
 name:  "Personal scheduling and task management"
-date: "2020-07-04 14:15:25"
+date: "2020-07-11 17:25:42"
 uid: "RSE-taxonomy-personal-scheduling-task-management"
 level: "Software to support research >> Incidentally used for research >> Personal scheduling and task management"
 color: "darkred"

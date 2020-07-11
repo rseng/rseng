@@ -1,6 +1,6 @@
 ---
 name:  "Would taking away the software be a detriment to research?"
-date: "2020-07-04 14:15:25"
+date: "2020-07-11 17:25:42"
 uid: "RSE-absence"
 options: ['yes', 'no']
 ---
