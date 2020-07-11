@@ -78,6 +78,10 @@
       uid: RSE-taxonomy-operating-systems
       color: mediumspringgreen
       example: linux
+    - name: Package Management
+      uid: RSE-taxonomy-package-management
+      color: indianred
+      example: spack, apt, yum, npm
     - name: Personal scheduling and task management
       uid: RSE-taxonomy-personal-scheduling-task-management 
       color: darkred
