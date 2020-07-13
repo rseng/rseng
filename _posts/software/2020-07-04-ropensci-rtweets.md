@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Software Survey: RTweets"
+title: "RTweets"
 date: 2020-07-04 16:00:46
 author: "@vsoch"
 annotate_criteria: https://rseng.github.io/software/repository/github/ropensci/rtweet/annotate-criteria/
