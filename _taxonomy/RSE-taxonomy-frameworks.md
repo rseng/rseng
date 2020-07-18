@@ -1,6 +1,6 @@
 ---
 name:  "Frameworks"
-date: "2020-07-11 17:26:54"
+date: "2020-07-18 17:33:23"
 uid: "RSE-taxonomy-frameworks"
 level: "Software to support research >> Used for research but not explicitly for it >> Frameworks"
 color: "darkseagreen"

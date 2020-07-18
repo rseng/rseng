@@ -1,6 +1,6 @@
 ---
 name:  "Application Programming Interfaces"
-date: "2020-07-11 17:26:54"
+date: "2020-07-18 17:33:23"
 uid: "RSE-taxonomy-application-programming-interfaces"
 level: "Software to support research >> Used for research but not explicitly for it >> Application Programming Interfaces"
 color: "darkturquoise"
