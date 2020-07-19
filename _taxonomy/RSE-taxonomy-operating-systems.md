@@ -1,6 +1,6 @@
 ---
 name:  "Operating systems"
-date: "2020-07-11 17:26:54"
+date: "2020-07-18 17:33:23"
 uid: "RSE-taxonomy-operating-systems"
 level: "Software to support research >> Incidentally used for research >> Operating systems"
 color: "mediumspringgreen"
