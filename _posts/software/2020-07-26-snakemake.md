@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Snakmake"
+title: "Snakemake"
 date: 2020-07-26 08:30:46
 author: "@vsoch"
 annotate_criteria: https://rseng.github.io/software/repository/github/snakemake/snakemake/annotate-criteria/
