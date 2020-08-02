@@ -80,7 +80,7 @@ You can also post questions on the [GitHub issues board](https://github.com/snak
 
 
 <a id="contribute">
-## How do I contributors to the software survey?
+## How do I contribute to the software survey?
 
 <ul>
 <li><a href="{{ page.annotate_criteria }}" target="_blank">Annotate the software criteria</a></li>

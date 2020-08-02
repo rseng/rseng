@@ -62,7 +62,7 @@ See [this page](https://rtweet.info/authors.html) for details on citation.
 }
 ```
 <a id="contribute">
-## How do I contributors to the software survey?
+## How do I contribute to the software survey?
 
 <ul>
 <li><a href="https://rseng.github.io/software/repository/github/ropensci/rtweet/annotate-criteria/" target="_blank">Annotate the software criteria</a></li>
