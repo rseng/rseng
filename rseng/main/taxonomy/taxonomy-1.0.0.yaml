@@ -83,7 +83,7 @@
       color: indianred
       example: spack, apt, yum, npm
     - name: Formatting, indexing, or other small helper libraries
-      uid: RSE-taxonomy-small-helper-libraries 
+      uid: RSE-taxonomy-helper-libraries 
       color: brown
       example: converters, string formatting, etc.
     - name: Personal scheduling and task management
