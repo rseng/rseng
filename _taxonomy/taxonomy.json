@@ -150,6 +150,13 @@
                             "size": 12
                         },
                         {
+                            "name": "Formatting, indexing, or other small helper libraries",
+                            "uid": "RSE-taxonomy-helper-libraries",
+                            "color": "brown",
+                            "example": "converters, string formatting, etc.",
+                            "size": 12
+                        },
+                        {
                             "name": "Personal scheduling and task management",
                             "uid": "RSE-taxonomy-personal-scheduling-task-management",
                             "color": "darkred",

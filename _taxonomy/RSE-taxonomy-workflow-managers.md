@@ -1,6 +1,6 @@
 ---
 name:  "Workflow managers"
-date: "2020-07-18 17:33:23"
+date: "2020-08-09 18:48:46"
 uid: "RSE-taxonomy-workflow-managers"
 level: "Software to support research >> Explicitly for research >> Workflow managers"
 color: "mediumaquamarine"
