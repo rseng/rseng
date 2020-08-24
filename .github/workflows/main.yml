@@ -5,7 +5,9 @@ on:
     branches:
       - master
   pull_request:
-    branches_ignore: []
+    branches-ignore:
+      - gh-pages 
+
 
 jobs:
   formatting:
