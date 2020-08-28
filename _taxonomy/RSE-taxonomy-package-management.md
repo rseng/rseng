@@ -1,6 +1,6 @@
 ---
 name:  "Package Management"
-date: "2020-08-09 12:53:30"
+date: "2020-08-24 13:49:56"
 uid: "RSE-taxonomy-package-management"
 level: "Software to support research >> Incidentally used for research >> Package Management"
 color: "indianred"
