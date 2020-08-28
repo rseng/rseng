@@ -17,7 +17,7 @@ exclude_from_search: true
                     <h4 class="list-group-item-heading" style="font-weight:600;font-size:60px;color: #428bca">Weekly Software Survey</h4>
                 </div>
             </div>
-   {% assign posts = site.posts | where_exp: "post", "post.categories contains 'Software'" %}
+   {% assign posts = site.posts | where: 'draft', 'false' | where_exp: "post", "post.categories contains 'Software'" %}
    {% for post in posts %}
        {% assign currentDate = post.date | date: "%Y" %}
        {% if currentDate != myDate %}

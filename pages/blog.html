@@ -9,7 +9,8 @@ permalink: /blog/
 
         <div class="col-lg-8">
 
-            {% for post in site.posts %}
+            {% assign posts = site.posts | where: 'draft', 'false' %}
+            {% for post in posts %}
                 <! -- Blog Post -->
                     {% if post.img %}
                     <a href="{{ post.url | prepend: site.baseurl }}">
