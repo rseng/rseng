@@ -98,6 +98,7 @@ There is an <a href="https://ieeexplore.ieee.org/document/6495863/" target="_bla
  - [Kenneth Hoste on RSE Stories](https://us-rse.org/rse-stories/2020/kenneth-hoste/): if you want to snuggle into a warm chair and listen to learn, you might be interested in listening to Kenneth talk about easybuild on the Research Software Engineer Stories Podcast.
  - [The EESSI Project](https://eessi.github.io/docs): pronounced "easy," this project grown out of the easybuild community aims to build a ready-to-go stack of properly optimized software installations for HPC systems, cloud, and workstations. It's heavily inspired by the <a href="https://www.computecanada.ca/" target="_blank">Compute Canada</a> software stack. See maintainer Kenneth Hoste's <a href="https://www.youtube.com/watch?v=E0LFvrZIsi8" target="_blank">introduction to the project</a> video, and if you're super eager, jump right into the <a href="https://eessi.github.io/docs/pilot/">pilot</a>.
  - [How to Make Package Mangers Cry](https://www.youtube.com/watch?v=NSemlYagjIU) if you want an introduction to some of the problems of package management, and a good laugh.
+ - [Kenneth Hoste on Twitter](https://twitter.com/kehoste) and [Easybuild on Twitter](https://twitter.com/easy_build) if you want a quick ping for social media. 
  
 You can also post questions on the [GitHub issues board](https://github.com/easybuilders/easybuild/issues).
 
