@@ -78,6 +78,10 @@
       uid: RSE-taxonomy-operating-systems
       color: mediumspringgreen
       example: linux
+    - name: Virtualization technologies
+      uid: RSE-taxonomy-virtualization
+      color: orange
+      example: containers (singularity, docker, podman) and virtual machines
     - name: Package Management
       uid: RSE-taxonomy-package-management
       color: indianred
