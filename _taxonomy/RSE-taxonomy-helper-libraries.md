@@ -1,6 +1,6 @@
 ---
 name:  "Formatting, indexing, or other small helper libraries"
-date: "2020-09-28 16:07:38"
+date: "2020-09-28 16:08:20"
 uid: "RSE-taxonomy-helper-libraries"
 level: "Software to support research >> Incidentally used for research >> Formatting, indexing, or other small helper libraries"
 color: "brown"

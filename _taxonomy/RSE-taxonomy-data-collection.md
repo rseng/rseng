@@ -1,6 +1,6 @@
 ---
 name:  "Data collection"
-date: "2020-09-28 16:07:38"
+date: "2020-09-28 16:08:20"
 uid: "RSE-taxonomy-data-collection"
 level: "Software to directly conduct research >> General software >> Data collection"
 color: "darksalmon"

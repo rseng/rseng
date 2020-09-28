@@ -1,6 +1,6 @@
 ---
 name:  "Domain-specific optimized software"
-date: "2020-09-28 16:07:38"
+date: "2020-09-28 16:08:20"
 uid: "RSE-taxonomy-optimized"
 level: "Software to directly conduct research >> Domain-specific software >> Domain-specific optimized software"
 color: "darkolivegreen"
