@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Singularity"
-date: 2020-09-27 08:30:46
+date: 2020-09-28 08:30:46
 author: "@vsoch"
 annotate_criteria: https://rseng.github.io/software/repository/github/hpcng/singularity/annotate-criteria/
 annotate_taxonomy: https://rseng.github.io/software/repository/github/hpcng/singularity/annotate-taxonomy/
@@ -17,6 +17,7 @@ In celebration of <a href="https://cloudonair.withgoogle.com/events/singularity_
 featuring this container technology this week, the RSEPedia software showcase is proud to present <a href="https://github.com/hpcng/singularity" target="_blank">Singularity</a>
 for the showcase this week. Singularity, since 2015, has really taken the high performance computing, especially academic,
 world by storm by providing a means to run trusted containers on large research clusters with many users.
+It's not the only, or a sure fire way to have reproducible science, but it sure is a good contender solution!
 Keep reading the following sections to learn more!
 
 <br>
@@ -57,8 +58,45 @@ but it's in fact a container instance running on your machine. Singularity offer
  - seamless environment with the host as the usual default, unless you specify otherise
  - a large, knowledgeable community.
 
+### Did you know that...
 
-So if reproducibility is the name of your game, you will want to check out <a href="https://sylabs.io/guides/3.5/user-guide/build_a_container.html#creating-writable-sandbox-directories" target='_blank'>Singularity</a>!
+While some of this is old news, here are some fun factoids that you might not have known about Singularity.
+
+#### Founding
+
+Singularity was created by Gregory Kurzer at Berkeley Lab - although unfortunately the punk rock looking site
+design is not preserved, you can see the original content on the [wayback machine](https://web.archive.org/web/20160306005043/http://singularity.lbl.gov/) 
+(take a look at the favicon to see a glimpse of the branding). It started on his personal GitHub, and was eventually
+encouraged to be moved to a more community driven organization, [Singularityware](https://github.com/singularityware), 
+which is no longer used. The code base has since moved twice, from [Sylabs](https://github.com/sylabs) and now to [hpcng](https://github.com/hpcng/singularity).
+Where will it fly to next?
+
+#### Languages
+
+Did you know that the original Singularity implementation was done in bash, C, and eventually Python? C handled
+low level routines, Python handled higher level API communication and parsing functions, and bash tied it all together.
+It wasn't until Singularity went under the umbrella of Sylabs that it was fully ported to Go, which of course
+adds a lot of benefits over it's previously very-academically appropriate hodge-podge of languages. Take a look at the
+[2.x](https://github.com/hpcng/singularity/tree/vault/2.x) branch for a walk down history lane!
+
+#### Docker
+
+Singularity didn't always play nicely with Docker, and in fact it was a contentious feature when it first came under
+discussion! An early developer (this writer, @vsoch) advocated for a designed the feature, and added the feature
+now [over four years ago](https://github.com/hpcng/singularity/pull/218). Many features that you have come to appreciate
+and enjoy that make it feel like Docker came directly from this same route.
+
+#### Forgotten Features
+
+Did you know that an early version of Singularity had a feature called [checks](https://github.com/hpcng/singularity/pull/789)?
+Added in summer of 2017, the idea was that the user could run `singularity check <container.sif>` and a series of automated security or other
+linting checks would be run, of course under control of the sysadmin managing the install. Although this feature
+seemed useful to the developer that implemented it, it was not ported to the Go version of Singularity and is since
+lost. However, on a positive note, [the scientific filesystem](https://sylabs.io/guides/3.3/user-guide/cli/singularity_apps.html), 
+called Singularity apps, a way to build a container with multiple entrypoints, was carried forward.
+
+Do you have any cool, historical facts to share about Singularity? [Let us know!](https://github.com/rseng/rseng/issues).
+Otherwise, if reproducibility is the name of your game, or if you've never tried it before, you should check out <a href="https://sylabs.io/guides/3.5/user-guide/build_a_container.html#creating-writable-sandbox-directories" target='_blank'>Singularity</a>!
 
 <a id="cite">
 ## How do I cite it?
@@ -92,7 +130,8 @@ There is an <a href="https://ieeexplore.ieee.org/document/6495863/" target="_bla
  - [The Singularity Slack](singularity-container.slack.com) has lots of folks to talk to
  - [The Singularity Google Group](https://groups.google.com/a/lbl.gov/forum/embed/#!forum/singularity) is a good place to ask for help.
  
-You can also post questions on the [GitHub issues board](https://github.com/hpcng/singularity/issues).
+Generally, if you do a GitHub search for Singularity tutorial or getting started, you'll get a robust set of resources, as many
+centers have rolled their own getting started guides. You can also post questions on the [GitHub issues board](https://github.com/hpcng/singularity/issues).
 
 <a id="contribute">
 ## How do I contribute to the software survey?
