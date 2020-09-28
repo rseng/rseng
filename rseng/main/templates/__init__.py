@@ -16,7 +16,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 
 def get_template(name, load=True):
     """Given the name of a template (a markdown file to use to generate jekyll
-       markdown frontend matter) return the template path if it exists.
+    markdown frontend matter) return the template path if it exists.
     """
     # The user can provide a custom template
     if not os.path.exists(name):

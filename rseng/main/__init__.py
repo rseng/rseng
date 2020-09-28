@@ -26,13 +26,13 @@ now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 class ResearchSoftware:
     """The Research Engineering client will load current taxonomy and criteria
-       for research software, and generate documentation files for them.
+    for research software, and generate documentation files for them.
     """
 
     def __init__(self, version="latest"):
         """create a software repository. We take a config file, which should
-           sit at the root of the repository, and then parse the subfolders
-           accordingly.
+        sit at the root of the repository, and then parse the subfolders
+        accordingly.
         """
         self.taxonomy = Taxonomy(version=version)
         self.criteria = CriteriaSet(version=version)
@@ -43,7 +43,7 @@ class ResearchSoftware:
         self, outdir=None, template="taxonomy-metadata-template.md", force=False
     ):
         """Given an output directory and a template name, export a set of
-           markdown files for the entire taxonomy
+        markdown files for the entire taxonomy
         """
         # If output folder not provided, assume _taxonomy in $PWD
         outdir = outdir or "_taxonomy"
@@ -76,7 +76,7 @@ class ResearchSoftware:
 
     def export_taxonomy_json(self, outfile=None, force=False, size=12):
         """Given an output json file, export the taxonomy d3 data. In the future,
-           sizes could be customized based on importance, etc.
+        sizes could be customized based on importance, etc.
         """
         outfile = outfile or "taxonomy.json"
 
@@ -99,8 +99,7 @@ class ResearchSoftware:
     def export_taxonomy_annotation_template(
         self, outfile, template="annotate-taxonomy-template.md", force=False
     ):
-        """Export a markdown template for a taxonomy annotation (as GitHub issue)
-        """
+        """Export a markdown template for a taxonomy annotation (as GitHub issue)"""
         items = ["%s\n%s\n" % (v["uid"], k) for k, v in self.taxonomy.flatten().items()]
         return self.export_annotation_template(
             template=template, items=items, outfile=outfile, force=force
@@ -110,7 +109,7 @@ class ResearchSoftware:
 
     def export_annotation_template(self, template, items, outfile=None, force=False):
         """Given an output directory and a template name, export a set of
-           markdown files for each criteria or taxonomy item.
+        markdown files for each criteria or taxonomy item.
         """
         # If output folder not provided, assume _taxonomy in $PWD
         template = get_template(template)
@@ -132,7 +131,7 @@ class ResearchSoftware:
         self, outdir, template="criteria-metadata-template.md", force=False
     ):
         """Given an output directory and a template name, export a set of
-           markdown files for each criteria
+        markdown files for each criteria
         """
         # If output folder not provided, assume _taxonomy in $PWD
         outdir = outdir or "_criteria"
@@ -163,7 +162,7 @@ class ResearchSoftware:
         self, outfile, template="annotate-criteria-template.md", force=False
     ):
         """Given an output directory and a template name, export a set of
-           markdown files for each criteria
+        markdown files for each criteria
         """
         items = ["%s\n%s\n" % (c.uid, c.question) for c in self.criteria]
         return self.export_annotation_template(
