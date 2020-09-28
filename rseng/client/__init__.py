@@ -40,7 +40,10 @@ def get_parser():
 
     description = "actions for rseng"
     subparsers = parser.add_subparsers(
-        help="rseng actions", title="actions", description=description, dest="command",
+        help="rseng actions",
+        title="actions",
+        description=description,
+        dest="command",
     )
 
     # print version and exit
@@ -48,7 +51,8 @@ def get_parser():
 
     # Generate a key for the interface
     generate = subparsers.add_parser(
-        "generate", help="generate output files for taxonomy and criteria",
+        "generate",
+        help="generate output files for taxonomy and criteria",
     )
 
     generate.add_argument(
@@ -90,14 +94,13 @@ def get_parser():
 
 
 def main():
-    """main entrypoint for rse
-    """
+    """main entrypoint for rse"""
 
     parser = get_parser()
 
     def help(return_code=0):
-        """print help, including the software version and active client 
-           and exit with return code.
+        """print help, including the software version and active client
+        and exit with return code.
         """
         version = rseng.__version__
 

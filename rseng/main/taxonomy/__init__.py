@@ -18,16 +18,15 @@ bot = logging.getLogger("rseng.main.taxonomy")
 
 
 class Taxonomy:
-    """a taxonomy holds the research software taxonomy
-    """
+    """a taxonomy holds the research software taxonomy"""
 
     def __init__(self, data_file=None, version="latest"):
         """data_file, if provided, should be a custom owx (owl xml file)
-           that is typically generated via export from webprotege.stanford.edu
+        that is typically generated via export from webprotege.stanford.edu
 
-           Arguments:
-             data_file (str) : path to a data file, with ids, questions, options
-             version (str)   : version string for file criteria-<version>.tsv
+        Arguments:
+          data_file (str) : path to a data file, with ids, questions, options
+          version (str)   : version string for file criteria-<version>.tsv
         """
         self.tree = None
         self.nodes = {}
@@ -45,8 +44,7 @@ class Taxonomy:
         return len(self.nodes)
 
     def export(self, filename=None, force=True, sep="\t"):
-        """save taxonomy to human readable file
-        """
+        """save taxonomy to human readable file"""
         if filename is not None and os.path.exists(filename) and force is False:
             sys.exit("{filename} exists! Set force=True to override it.")
 
@@ -85,8 +83,7 @@ class Taxonomy:
         return out
 
     def load(self, data_file):
-        """Load a data file
-        """
+        """Load a data file"""
         self.tree = read_yaml(data_file)
         nodes = self.tree.copy()
         while nodes:
