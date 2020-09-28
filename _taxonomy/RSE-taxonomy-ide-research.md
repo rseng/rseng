@@ -1,6 +1,6 @@
 ---
 name:  "Interactive development environments for research"
-date: "2020-08-24 13:49:56"
+date: "2020-09-28 16:07:38"
 uid: "RSE-taxonomy-ide-research"
 level: "Software to support research >> Explicitly for research >> Interactive development environments for research"
 color: "mediumorchid"

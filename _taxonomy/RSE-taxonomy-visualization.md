@@ -1,6 +1,6 @@
 ---
 name:  "Visualization"
-date: "2020-08-24 13:49:56"
+date: "2020-09-28 16:07:38"
 uid: "RSE-taxonomy-visualization"
 level: "Software to directly conduct research >> General software >> Visualization"
 color: "darkviolet"
