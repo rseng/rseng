@@ -44,7 +44,7 @@ Benchmarking approximate algorithms has unique difficulties. Usually when benchm
 
 ann-benchmarks invents a way to combine these two points of view: It plots queries per second (roughly speed) versus recall (roughly how many of the nearest neighbors did we get). This will vary depending on hardware, so a number of leading algorithms have been placed in Docker containers, along with a handful of representative data sets (different algorithms can perform differently depending on features of the data set, like its dimension).
 
-The only dependencies are Python 3.6 and Docker. Just clone and install the package. Running it is also easy (although running all algorithms on all data sets can take days!). You can configure a YAML file to specify datasets. An example invocation:
+The only dependencies are Python 3.6 and Docker. Just clone and install the package. Running it is easy (although running all algorithms on all data sets can take days!). You can configure a YAML file to specify datasets. An example invocation:
 
 ```bash
 python run.py --dataset glove-100-angular
@@ -55,6 +55,8 @@ In this case, the script would run all algorithms on the 'glove-100-angular' dat
 #### Why is it useful?
 
 This repo is very nice for those interested in benchmarking ANN on their data with their own hardware given how easy it is to use. It also represents best practices in reproducibility by running each algorithm in a container. I hope we will see this trend continue for benchmarking other algorithms (especially approximate algorithms that have unique challenges)!
+
+Also check out ann-benchmarks.com for an extensive list of results across the various algorithms and datasets used.
 
 <a id="cite">
 ## How do I cite it?
@@ -76,6 +78,7 @@ There is an accompanying paper paper, which you can cite using:
 ## How do I get started?
  
  - [README Documentation](https://github.com/erikbern/ann-benchmarks#Install) is always a good place to start.
+ - [ann-benchmarks.com](http://ann-benchmarks.com) is the main site.
 
 <a id="contribute">
 ## How do I contribute to the software survey?
