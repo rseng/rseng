@@ -44,7 +44,7 @@ Benchmarking approximate algorithms has unique difficulties. Usually when benchm
 
 ann-benchmarks invents a way to combine these two points of view: It plots queries per second (roughly speed) versus recall (roughly how many of the nearest neighbors did we get). This will vary depending on hardware, so a number of leading algorithms have been placed in Docker containers, along with a handful of representative data sets (different algorithms can perform differently depending on features of the data set, like its dimension).
 
-The only dependencies are Python 3.6 and Docker. Just clone and install the package. Running it is also easy (although running all algorithms on all data sets can take days!). You can configure a YAML file to specify datasets. An example invocation:
+The only dependencies are Python 3.6 and Docker. Just clone and install the package. Running it iseasy (although running all algorithms on all data sets can take days!). You can configure a YAML file to specify datasets. An example invocation:
 
 ```bash
 python run.py --dataset glove-100-angular
