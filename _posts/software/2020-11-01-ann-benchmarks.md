@@ -56,6 +56,8 @@ In this case, the script would run all algorithms on the 'glove-100-angular' dat
 
 This repo is very nice for those interested in benchmarking ANN on their data with their own hardware given how easy it is to use. It also represents best practices in reproducibility by running each algorithm in a container. I hope we will see this trend continue for benchmarking other algorithms (especially approximate algorithms that have unique challenges)!
 
+Also check out ann-benchmarks.com for an extensive list of results across the various algorithms and datasets used.
+
 <a id="cite">
 ## How do I cite it?
 
