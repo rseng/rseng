@@ -9,7 +9,7 @@ categories:
 - Software
 ---
 
-Today's post is all about benchmarking. We'll focus on <a href="https://github.com/erikbern/ann-benchmarks" target="_blank">erikbern/ann-benchmarks</a> which is project used to evaluate approximate nearest neighbor searches (ANN).
+Today's post is all about benchmarking. We'll focus on <a href="https://github.com/erikbern/ann-benchmarks" target="_blank">erikbern/ann-benchmarks</a>, which is project used to evaluate approximate nearest neighbor searches (ANN).
 
 What is ANN? In many applications we want to solve the nearest neighbor problem -- given some point in the dataset, what are other points closest to it? For example, if you are listening to one song in a dataset and want recommendations for similar songs, you might want to look at its nearest neighbors! People have found ways to speed up nearest neighbor searches using approximation methods, which are often good enough. Hence, 'Approximate Nearest Neighbors'!
 
