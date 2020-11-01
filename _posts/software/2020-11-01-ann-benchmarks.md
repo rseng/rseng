@@ -78,7 +78,7 @@ There is an accompanying paper paper, which you can cite using:
 ## How do I get started?
  
  - [README Documentation](https://github.com/erikbern/ann-benchmarks#Install) is always a good place to start.
- - [main site](http://ann-benchmarks.com) is the main site.
+ - [ann-benchmarks.com](http://ann-benchmarks.com) is the main site.
 
 <a id="contribute">
 ## How do I contribute to the software survey?
