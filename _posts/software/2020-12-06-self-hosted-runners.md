@@ -3,13 +3,13 @@ layout: post
 title: "self-hosted-runners"
 date: 2020-12-06
 author: "@vsoch"
-annotate_criteria: https://rseng.github.io/software/repository/github/ci-for-research/self-hosted-runners/annotate-criteria/index.html
-annotate_taxonomy: https://rseng.github.io/software/repository/github/ci-for-research/self-hosted-runners/annotate-taxonomy/
+annotate_criteria: https://rseng.github.io/software/repository/github/ci-for-science/self-hosted-runners/annotate-criteria/index.html
+annotate_taxonomy: https://rseng.github.io/software/repository/github/ci-for-science/self-hosted-runners/annotate-taxonomy/
 categories:
 - Software
 ---
 
-Did you know that you can use [self hosted runners](https://docs.github.com/en/free-pro-team@latest/actions/hosting-your-own-runners/about-self-hosted-runners) for GitHub actions? For this non-traditional research software showcase, we want to introduce you to [ci-for-research/self-hosted-runners](https://github.com/ci-for-research/self-hosted-runners/), a repository of recipes to help you get started with your own self hosted runners!
+Did you know that you can use [self hosted runners](https://docs.github.com/en/free-pro-team@latest/actions/hosting-your-own-runners/about-self-hosted-runners) for GitHub actions? For this non-traditional research software showcase, we want to introduce you to [ci-for-science/self-hosted-runners](https://github.com/ci-for-science/self-hosted-runners/), a repository of recipes to help you get started with your own self hosted runners!
 
 <br>
 
@@ -41,7 +41,7 @@ You can think of a runner as a server (somewhere, either one that you control or
 
 #### Why is it useful?
 
-However, mapping this documentation to real world examples, especially if you are low on bandwidth, can take a lot of time. This is the reason to have repositories like [ci-for-research/self-hosted-runners](https://github.com/ci-for-research/self-hosted-runners/).
+However, mapping this documentation to real world examples, especially if you are low on bandwidth, can take a lot of time. This is the reason to have repositories like [ci-for-science/self-hosted-runners](https://github.com/ci-for-science/self-hosted-runners/).
 The `self-hosted-runners` repository can quickly give you complete instructions for multiple
 different kinds of configurations. Do you want to use a container technology on your local machine? or maybe a cloud that you control? This respository can get you started!
 
