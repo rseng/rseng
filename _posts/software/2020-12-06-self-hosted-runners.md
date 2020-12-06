@@ -73,6 +73,7 @@ The repository [DOI](https://doi.org/10.5281/zenodo.3904265) comes by way of Zen
 ## How do I get started?
  
  - [GitHub Documentation](https://github.com/ci-for-research/self-hosted-runners)
+ - [research-software.nl](https://research-software.nl/software/self-hosted-runners) has the original posting.
 
 And if you are a developer, it would be fun to contribute new recipes for runners that are not added yet.
 
