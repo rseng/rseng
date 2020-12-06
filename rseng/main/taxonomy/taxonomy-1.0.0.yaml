@@ -106,3 +106,11 @@
       uid: RSE-taxonomy-communication-tools
       example: email, slack, etc.
       color: mediumturquoise
+    - name: Testing
+      uid: RSE-taxonomy-testing
+      example: testing software or libraries, CI for testing.
+      color: aquamarine
+    - name: Infrastructure
+      uid: RSE-taxonomy-infrastructure
+      example: orchestration tools, clusters, or server management
+      color: blue
