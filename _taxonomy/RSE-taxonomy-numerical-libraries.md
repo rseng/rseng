@@ -1,6 +1,6 @@
 ---
 name:  "Numerical libraries"
-date: "2020-12-06 17:02:43"
+date: "2020-12-06 17:04:00"
 uid: "RSE-taxonomy-numerical-libraries"
 level: "Software to directly conduct research >> General software >> Numerical libraries"
 color: "darkorchid"
