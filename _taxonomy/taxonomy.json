@@ -190,6 +190,20 @@
                             "example": "email, slack, etc.",
                             "color": "mediumturquoise",
                             "size": 12
+                        },
+                        {
+                            "name": "Testing",
+                            "uid": "RSE-taxonomy-testing",
+                            "example": "testing software or libraries, CI for testing.",
+                            "color": "aquamarine",
+                            "size": 12
+                        },
+                        {
+                            "name": "Infrastructure",
+                            "uid": "RSE-taxonomy-infrastructure",
+                            "example": "orchestration tools, clusters, or server management",
+                            "color": "blue",
+                            "size": 12
                         }
                     ],
                     "size": 12
