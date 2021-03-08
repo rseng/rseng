@@ -18,7 +18,7 @@
         <ul class="popular-posts">
             {% for post in site.posts limit:4 %}
                 <li>
-                    <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} baa{{ post.url }}</a></p>
+                    <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} {{ post.url }}</a></p>
                 <em>Posted on {{ post.date | date_to_string }}</em>
             </li>
             {% endfor %}
