@@ -108,7 +108,48 @@ provided by json-schema.org, or look at examples in the wild (here is a set that
 <a id="cite">
 ## How do I cite it?
 
-The author doesn't appear to have a citation, but you can support him on 
+```bibtex
+ @software{julian_berman_2021_5539942,
+  author       = {Julian Berman and
+                  Chase Sterling and
+                  Romain Taprest and
+                  Harald Nezbeda and
+                  wilson chen and
+                  Opemipo and
+                  DavidKorczynski and
+                  Glenn Maynard and
+                  Ben Smithers and
+                  Martin Zugnoni and
+                  Colin Dunklau and
+                  Hillel Arnold and
+                  Daniel Nephin and
+                  Bouke Haarsma and
+                  John Anderson and
+                  Lennart and
+                  ApamNapat and
+                  Alexander Bayandin and
+                  Gabriel Le Breton and
+                  joepvandijken and
+                  Nicolás Aimetti and
+                  apiraino and
+                  johnthagen and
+                  Michael Droettboom and
+                  Omar Ryhan and
+                  Vlad Stefan Munteanu and
+                  Adam Dobrawy and
+                  Jacob D. Moorman and
+                  Zac Hatfield-Dodds},
+  title        = {Julian/jsonschema: v4.0.0},
+  month        = sep,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {v4.0.0},
+  doi          = {10.5281/zenodo.5539942},
+  url          = {https://doi.org/10.5281/zenodo.5539942}
+}
+```
+ 
+You can also support the author on 
 [Patreon](https://patreon.com/JulianWasTaken) or [Tidelift](https://tidelift.com/funding/github/pypi/jsonschema).
 
 
