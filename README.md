@@ -2,6 +2,7 @@
 
 [![PyPI version](https://badge.fury.io/py/rseng.svg)](https://badge.fury.io/py/rseng)
 [![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/) [![https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg](https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg)](https://good-labs.github.io/greater-good-affirmation)
+[![DOI](https://zenodo.org/badge/271359724.svg)](https://zenodo.org/badge/latestdoi/271359724)
 
 Criteria and taxonomy for research software engineering (rseng).
 
