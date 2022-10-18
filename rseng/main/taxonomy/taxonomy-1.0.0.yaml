@@ -55,7 +55,7 @@
       color: mediumseagreen
       example: schema.org, codemeta, etc.
   - name: Used to manage infrastructure
-    uid: RSE-taxonomy-incidentally-used-for-research
+    uid: RSE-taxonomy-used-to-manage-infrastructure
     color: darkmagenta
     children:
     - name: Operating systems
