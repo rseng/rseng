@@ -1,14 +1,14 @@
 - name: Software to directly conduct research
   uid: RSE-taxonomy-conduct-research
   color: darkblue
-  children: 
+  children:
   - name: Domain-specific software
     uid: RSE-taxonomy-domain-specific
     color: darkcyan
     children:
     - name: Domain-specific hardware
       uid: RSE-taxonomy-domain-hardware
-      example: software for physics to control lab equipment 
+      example: software for physics to control lab equipment
       color: darkgray
     - name: Domain-specific optimized software
       uid: RSE-taxonomy-optimized
@@ -54,26 +54,10 @@
       uid: RSE-taxonomy-provenance-metadata-tools
       color: mediumseagreen
       example: schema.org, codemeta, etc.
-  - name: Used for research but not explicitly for it
-    uid: RSE-taxonomy-used-not-explicitly-for
-    color: darkslateblue
-    children: 
-    - name: Databases
-      uid: RSE-taxonomy-databases
-      example: container registry, software database, data text files, etc.
-      color: darkkhaki
-    - name: Application Programming Interfaces
-      uid: RSE-taxonomy-application-programming-interfaces
-      color: darkturquoise
-      example: Pubmed, arXiv, Orcid, etc.
-    - name: Frameworks
-      uid: RSE-taxonomy-frameworks
-      example: documentation generators, content management systems, django
-      color: darkseagreen
-  - name: Incidentally used for research
+  - name: Used to manage infrastructure
     uid: RSE-taxonomy-incidentally-used-for-research
     color: darkmagenta
-    children: 
+    children:
     - name: Operating systems
       uid: RSE-taxonomy-operating-systems
       color: mediumspringgreen
@@ -86,31 +70,51 @@
       uid: RSE-taxonomy-package-management
       color: indianred
       example: spack, apt, yum, npm
-    - name: Formatting, indexing, or other small helper libraries
-      uid: RSE-taxonomy-helper-libraries 
-      color: brown
-      example: converters, string formatting, etc.
-    - name: Personal scheduling and task management
-      uid: RSE-taxonomy-personal-scheduling-task-management 
-      color: darkred
-      example: Asana, Trello, etc. 
-    - name: Version control
-      uid: RSE-taxonomy-version-control
-      example: git, svn
-      color: mediumblue
     - name: Text editors and integrated development environments
       uid: RSE-taxonomy-text-editors-ides
       color: mediumslateblue
       example: atom, gedit, vim
-    - name: Communication tools or platforms
-      uid: RSE-taxonomy-communication-tools
-      example: email, slack, etc.
-      color: mediumturquoise
-    - name: Testing
-      uid: RSE-taxonomy-testing
-      example: testing software or libraries, CI for testing.
-      color: aquamarine
     - name: Infrastructure
       uid: RSE-taxonomy-infrastructure
       example: orchestration tools, clusters, or server management
       color: blue
+    - name: Databases
+      uid: RSE-taxonomy-databases
+      example: container registry, software database, data text files, etc.
+      color: darkkhaki
+  - name: Utility incidentally used for research
+    uid: RSE-taxonomy-incidentally-used-for-research
+    color: darkmagenta
+    children:
+    - name: Formatting, indexing, or other small helper libraries
+      uid: RSE-taxonomy-helper-libraries
+      color: brown
+      example: converters, string formatting, etc.
+    - name: Application Programming Interfaces
+      uid: RSE-taxonomy-application-programming-interfaces
+      color: darkturquoise
+      example: Pubmed, arXiv, Orcid, etc.
+    - name: Frameworks
+      uid: RSE-taxonomy-frameworks
+      example: documentation generators, content management systems, django
+      color: darkseagreen
+  - name: Tool supporting development and team work
+    uid: RSE-taxonomy-support-development-and-team-work
+    color: darkslateblue
+    children:
+    - name: Testing
+      uid: RSE-taxonomy-testing
+      example: testing software or libraries, CI for testing.
+      color: aquamarine
+    - name: Communication tools or platforms
+      uid: RSE-taxonomy-communication-tools
+      example: email, slack, etc.
+      color: mediumturquoise
+    - name: Personal scheduling and task management
+      uid: RSE-taxonomy-personal-scheduling-task-management
+      color: darkred
+      example: Asana, Trello, etc.
+    - name: Version control
+      uid: RSE-taxonomy-version-control
+      example: git, svn
+      color: mediumblue
