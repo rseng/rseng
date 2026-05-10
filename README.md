@@ -2,7 +2,7 @@
 
 [![PyPI version](https://badge.fury.io/py/rseng.svg)](https://badge.fury.io/py/rseng)
 [![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/) [![https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg](https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg)](https://good-labs.github.io/greater-good-affirmation)
-[![DOI](https://zenodo.org/badge/271359724.svg)](https://zenodo.org/badge/latestdoi/271359724)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5546054.svg)](https://doi.org/10.5281/zenodo.5546054)
 
 Criteria and taxonomy for research software engineering (rseng).
 
@@ -338,6 +338,10 @@ Example in the wild include [this one for criteria](https://github.com/rseng/sof
 Note that you should add the templates along with creating labels, one for each
 of `taxonomy` and `criteria`. A workflow to automatically update criteria/taxonomy items
 is being written and will be added soon.
+
+## Citation
+
+> Sochat, V., May, N., Cosden, I., Martinez-Ortiz, C. and Bartholomew, S. (2022) ‘The Research Software Encyclopedia: A Community Framework to Define Research Software’, <i>Journal of Open Research Software</i>, 10(1), p. 2. Available at: https://doi.org/10.5334/jors.359.
 
 ## License
 
